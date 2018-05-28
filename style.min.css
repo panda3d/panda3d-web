@@ -112,7 +112,7 @@ a:hover,a:active{outline:0}
 .sticky{display:block}
 .hentry{margin:0 0 1.5em}
 .updated:not(.published){display:none}
-.page-content,.entry-content,.entry-summary{margin:1.5em 0 0}
+.page-content,.entry-summary{margin:1.5em 0 0}
 .page-links{clear:both;margin:0 0 1.5em}
 #header{background:#222;display:-ms-grid;display:grid;-ms-grid-columns:1fr 5fr;grid-template-columns:1fr 5fr;padding:1rem}
 .infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer{display:none}
