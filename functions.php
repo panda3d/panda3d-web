@@ -120,8 +120,12 @@ add_action( 'widgets_init', 'panda3d_widgets_init' );
  * Enqueue scripts and styles.
  */
 function panda3d_scripts() {
+	// Vendor
+	wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', array(), '2018518', true );
+
+	// Theme
 	wp_enqueue_style( 'panda3d-style', get_stylesheet_uri() );
-	wp_enqueue_script( 'panda3d-navigation', get_template_directory_uri() . '/bundle.min.js', array(), '2018518', true );
+	wp_enqueue_script( 'panda3d-js', get_template_directory_uri() . '/bundle.min.js', array(), '2018518', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
