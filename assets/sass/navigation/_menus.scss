@@ -1,15 +1,15 @@
 .main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+	float: right;
+	height: 100%;
 
 	> div {
 		float: right;
+		height: 100%;
 	}
 
 	ul {
 		display: none;
+		height: 100%;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
@@ -47,14 +47,23 @@
 
 	li {
 		float: left;
+		height: 100%;
 		position: relative;
 	}
 
 	a {
 		color: #fff;
 		display: block;
+		height: 100%;
+		line-height: $size__header-height;
+		padding: 0 1rem;
 		text-decoration: none;
 		text-transform: uppercase;
+
+		&:hover, &:active, &:focus {
+			background-color: #fff;
+			color: #000;
+		}
 	}
 
 	.current_page_item > a,

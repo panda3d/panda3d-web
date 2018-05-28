@@ -1,6 +1,33 @@
 #header {
     background: $color__background-header;
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-    padding: 1rem;
+    height: $size__header-height;
+
+    .header-container {
+        height: 100%;
+        margin: auto;
+        max-width: 1440px;
+    }
+
+    .site-branding {
+        display: inline-block;
+        height: 100%;
+
+        a {
+            height: 100%;
+
+            &:hover, &:active, &:focus {
+                background-color: darken($color__background-header, 5%);
+            }
+        }
+
+        img {
+            max-height: 100%;
+            max-width: none;
+            padding: 0.5rem;
+            position: relative;
+            transform: translateY(-50%);
+            top: 50%;
+            width: auto;
+        }
+    }
 }
