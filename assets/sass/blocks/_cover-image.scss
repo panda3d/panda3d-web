@@ -1,0 +1,11 @@
+.wp-block-cover-image {
+    min-height: 700px;
+
+    .wp-block-cover-image-text {
+        background-color: rgba(#000, 0.5);
+        font-size: 3rem;
+        margin: 0;
+        max-width: 900px;
+        text-transform: uppercase;
+    }
+}
