@@ -13,21 +13,12 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
+	<footer id="footer" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'panda3d' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'panda3d' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'panda3d' ), 'panda3d', '<a href="https://joeyz.io/">Joey Ziolkowski</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+			<span>© 2010-<?php echo date("Y"); ?> Carnegie Mellon University</span>
+		</div>
+	</footer>
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
