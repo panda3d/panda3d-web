@@ -1,5 +1,6 @@
 html {
 	box-sizing: border-box;
+	min-height: 100%;
 }
 
 *,
@@ -10,6 +11,7 @@ html {
 
 body {
 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+	min-height: 100%;
 }
 
 hr {
