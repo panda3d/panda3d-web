@@ -4,16 +4,74 @@ a {
 	&:visited {
 		color: $color__link-visited;
 	}
-	&:hover,
-	&:focus,
-	&:active {
+	&:hover, &:focus, &:active {
 		color: $color__link-hover;
 	}
 	&:focus {
 		outline: thin dotted;
 	}
-	&:hover,
-	&:active {
+	&:hover, &:active {
 		outline: 0;
+	}
+}
+
+.cta {
+    border: 2px solid transparent;
+    display: inline-block;
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+	text-transform: uppercase;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover, &:active, &:focus {
+        box-shadow: 0 4px 4px 0 rgba(#000, 0.3);
+    }
+}
+
+.cta--primary {
+	@extend .cta;
+	background-color: $color__cta;
+	border: 2px solid $color__cta;
+	color: #fff;
+
+	&:hover, &:active, &:focus {
+		background: $color__cta-hover;
+		border-color: $color__cta-hover;
+		color: #fff;
+	}
+}
+
+.cta--secondary {
+	@extend .cta;
+	border-color: $color__cta;
+	color: $color__cta;
+
+	&:hover, &:active, &:focus {
+		background: $color__cta-hover;
+		border-color: $color__cta-hover;
+		color: #fff;
+	}
+}
+
+.cta--action {
+	@extend .cta;
+	border-bottom-color: $color__cta;
+	color: $color__cta;
+
+	&:hover, &:active, &:focus {
+		border-bottom-color: $color__cta-hover;
+		box-shadow: none;
+		color: $color__cta;
+
+		&:after {
+			padding-left: 12px;
+		}
+	}
+
+	&:after {
+		content: '';
+		font-family: FontAwesome;
+		padding-left: 8px;
+		transition: 0.1s padding-left linear;
 	}
 }
