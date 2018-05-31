@@ -63,3 +63,21 @@ $color__border-abbr: #666;
 );
 
 $columns__margin: 3.8%;
+
+// Predefined breakpoints for Media Query mixin
+$breakpoints: (
+	small: (
+		min: 0px,
+		max: 639px),
+	medium: (
+		min: 640px,
+		max: 1023px),
+	large: (
+		min: 1024px,
+		max: 1199px),
+	xlarge: (
+		min: 1200px,
+		max: 1339px),
+	xxlarge: (
+		min: 1440px)
+);

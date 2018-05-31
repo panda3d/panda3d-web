@@ -1,29 +1,102 @@
-// Rem output with px fallback
+/**
+ * Clearfix
+ */
+ @mixin clearfix() {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+// Clear after (Some clearfix need this too)
+@mixin clearfix-after() {
+	clear: both;
+}
+
+
+/**
+ * Rem font size with pixel fallback
+ */
 @mixin font-size($sizeValue: 1) {
 	font-size: ($sizeValue * 16) * 1px;
 	font-size: $sizeValue * 1rem;
 }
 
-// Center block
+
+/**
+ * Center Block
+ */
 @mixin center-block {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-// Clearfix
-@mixin clearfix() {
-	content: "";
-	display: table;
-	table-layout: fixed;
-}
 
-// Clear after (not all clearfix need this also)
-@mixin clearfix-after() {
-	clear: both;
-}
-
-// Column width with margin
+/**
+ * Column width with margin
+ */
 @mixin column-width($numberColumns: 3) {
 	width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+}
+
+
+/**
+ * Map Deep Get
+ * SASS Utility to get the values of multi-layered maps.
+ *
+ * Example:
+ *     $breakpoints: (
+ *	      small: (
+ *		      min: 0px,
+ *		      max: 639px),
+ *      )
+ *      map-deep-get($breakpoints, small, max) // 639px
+ */
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}
+
+
+/**
+ * Media Query Breakpoint Mixin
+ * Specify a predefined breakpoint, or a custom breakpoint followed by an optional flag. Supported
+ * flag values are "down" (For a maximum screen size) and "only" (For a minimum and maximum size)
+ *
+ * Examples:
+ *     @include breakpoint(800px down) {} // @media (max-width: 800px) {}
+ * 	   @include breakpoint(medium only) {} // @media (min-width: 640px) and (max-width: 1023px) {}
+ */
+@mixin breakpoint($breakpoint, $flag: up) {
+	// Initialize minimum and maximum size variables
+	$min: $breakpoint;
+	$max: $breakpoint;
+
+	@if map-has-key($breakpoints, $breakpoint) {
+		// Check if this is a predefined breakpoint
+		$min: map-deep-get($breakpoints, $breakpoint, min);
+		$max: map-deep-get($breakpoints, $breakpoint, max);
+	} @else if $flag == only {
+		// Custom breakpoints can only be one size, rather than a min and max together, and thus
+		// can't be used with the 'only' flag
+		@error "Can't set 'only' type for a custom breakpoint!";
+	}
+
+	@if $flag == down {
+		// For this breakpoint and sizes 'down'
+		@media (max-width: $max) {
+			@content;
+		}
+	} @else if $flag == only {
+		// For this breakpoint 'only'
+		@media (min-width: $min) and (max-width: $max) {
+			@content;
+		}
+	} @else {
+		// For this breakpoint and sizes 'up'
+		@media (min-width: $min) {
+			@content;
+		}
+	}
 }
