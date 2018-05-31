@@ -22,7 +22,10 @@ a {
 	font-weight: 100;
     padding: 0.75rem 2rem;
 	text-decoration: none;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+				background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+				border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+				color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cta--primary {
@@ -44,7 +47,7 @@ a {
 	color: $color__cta;
 
 	&:hover, &:active, &:focus {
-		background: $color__cta-hover;
+		background-color: $color__cta-hover;
 		border-color: $color__cta-hover;
 		color: #fff;
 	}
