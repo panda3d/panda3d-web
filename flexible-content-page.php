@@ -11,7 +11,7 @@ get_header();
 ?>
 
 <div class="entry-content">
-    panda3d_display_flexible_content();
+    <?php panda3d_display_flexible_content(); ?>
 </div>
 
 <?php
