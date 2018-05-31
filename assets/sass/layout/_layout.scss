@@ -45,7 +45,13 @@
 }
 
 .entry-content {
-	min-height: calc(100vh - 116px);
+	min-height: calc(100vh - 111px);
+}
+
+.admin-bar {
+	.entry-content {
+		min-height: calc(100vh - 143px);
+	}
 }
 
 .page-links {
