@@ -56,6 +56,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "layout/widgets";
 
 /**
+ * Advanced Custom Fields
+ */
+ @import "acf/hero";
+
+/**
  * Gutenberg Editor
  */
  @import "gutenberg/cover-image";
