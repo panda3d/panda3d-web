@@ -17,18 +17,45 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
-@import "variables-site/variables-site";
-@import "mixins/mixins-master";
-@import "normalize";
+/**
+ * SASS Helpers
+ */
+@import "variables";
+@import "mixins";
 
-@import "typography/typography";
-@import "elements/elements";
-@import "forms/forms";
-@import "navigation/navigation";
-@import "modules/accessibility";
-@import "modules/alignments";
-@import "site/secondary/widgets";
-@import "site/site";
-@import "modules/infinite-scroll";
-@import "media/media";
-@import "blocks/blocks";
+/**
+ * Vendor Styles
+ */
+@import "vendor/normalize";
+
+/**
+ * HTML Element Defaults
+ */
+@import "elements/general";
+@import "elements/links";
+@import "elements/lists";
+@import "elements/forms";
+@import "elements/tables";
+
+/**
+ * Modules
+ */
+ @import "modules/accessibility";
+ @import "modules/alignments";
+
+/**
+ * Site Layout
+ */
+@import "layout/layout";
+@import "layout/comments";
+@import "layout/footer";
+@import "layout/galleries";
+@import "layout/header";
+@import "layout/menus";
+@import "layout/typography";
+@import "layout/widgets";
+
+/**
+ * Gutenberg Editor
+ */
+ @import "gutenberg/cover-image";

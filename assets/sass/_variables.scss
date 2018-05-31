@@ -1,3 +1,6 @@
+/**
+ * Colors
+ */
 $color__background-body: #fff;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
@@ -19,3 +22,35 @@ $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
+
+
+/**
+ * Typography
+ */
+ $font__main: 'Roboto', sans-serif;
+ $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+ $font__pre: "Courier 10 Pitch", Courier, monospace;
+ $font__line-height-body: 1.5;
+ $font__line-height-pre: 1.6;
+
+
+/**
+ * Layout
+ */
+ $size__site-main: 100%;
+ $size__site-sidebar: 25%;
+ $size__header-height: 60px;
+
+ $columns: (
+	1: 100%,
+	2: 50%,
+	3: 33.33%,
+	4: 25%,
+	5: 20%,
+	6: 16.66%,
+	7: 14.28%,
+	8: 12.5%,
+	9: 11.11%
+);
+
+$columns__margin: 3.8%;

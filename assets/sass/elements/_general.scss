@@ -3,15 +3,13 @@ html {
 	min-height: 100%;
 }
 
-*,
-*:before,
-*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-	box-sizing: inherit;
+body {
+	background: $color__background-body;
+	min-height: 100%;
 }
 
-body {
-	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
-	min-height: 100%;
+*, *:before, *:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
 }
 
 hr {
@@ -20,8 +18,6 @@ hr {
 	height: 1px;
 	margin-bottom: 1.5em;
 }
-
-@import "lists";
 
 img {
 	height: auto; /* Make sure images are scaled correctly. */
@@ -32,4 +28,9 @@ figure {
 	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
 }
 
-@import "tables";
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
