@@ -81,7 +81,7 @@
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+@include breakpoint(800px) {
 	.menu-toggle {
 		display: none;
 	}
