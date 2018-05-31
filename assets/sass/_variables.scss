@@ -28,7 +28,7 @@ $color__text-main: #404040;
 
 // Button colors
 $color__cta: $color__primary;
-$color__cta-hover: lighten($color__primary, 5%);
+$color__cta-hover: lighten($color__primary, 10%);
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
@@ -51,7 +51,7 @@ $color__border-abbr: #666;
  */
  $size__site-main: 100%;
  $size__site-sidebar: 25%;
- $size__header-height: 60px;
+ $size__header-height: 55px;
 
  $columns: (
 	1: 100%,
