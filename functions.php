@@ -22,4 +22,9 @@ require get_template_directory() . '/inc/core/template-tags.php';      // Add cu
 require get_template_directory() . '/inc/core/template-functions.php'; // Functions which enhance the theme by hooking into WordPress
 require get_template_directory() . '/inc/core/customizer.php';         // Customizer additions
 
-.
+/**
+ * Advanced Custom Fields Functions
+ */
+include get_template_directory() . '/inc/acf/acf-flexible.php'; // Components for Flexible Content Page
+include get_template_directory() . '/inc/acf/acf-options.php';  // Set up ACF Options Page
+

@@ -1,0 +1,69 @@
+{
+    "key": "group_5a0a199e59135",
+    "title": "Footer",
+    "fields": [
+        {
+            "key": "field_5b0f2537021e0",
+            "label": "Copyright Year",
+            "name": "copyright_year",
+            "type": "number",
+            "instructions": "Original copyright date to display in the footer.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": 2010,
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5b0f25ac021e1",
+            "label": "Copyright Holder",
+            "name": "copyright_holder",
+            "type": "text",
+            "instructions": "Company or organization which holds the copyright to this website.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Company, Inc.",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "panda3d-theme-settings"
+            },
+            {
+                "param": "current_user_role",
+                "operator": "==",
+                "value": "administrator"
+            }
+        ]
+    ],
+    "menu_order": 10,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1527719385
+}

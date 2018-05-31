@@ -1,0 +1,181 @@
+{
+    "key": "group_59fcb725a4771",
+    "title": "Interface",
+    "fields": [
+        {
+            "key": "field_59fcb7cf4be69",
+            "label": "Primary Call to Action?",
+            "name": "primary_call_to_action",
+            "type": "true_false",
+            "instructions": "Does this website have a primary Call to Action? Creates primary buttons across components.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_59fcb72c4be68",
+            "label": "Primary Call to Action Text",
+            "name": "primary_call_to_action_text",
+            "type": "text",
+            "instructions": "Text to display on primary Call to Action buttons.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59fcb7cf4be69",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Grab Attention",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59fcb8514be6a",
+            "label": "Primary Call to Action URL",
+            "name": "primary_call_to_action_url",
+            "type": "page_link",
+            "instructions": "Text to display on primary Call to Action buttons.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59fcb7cf4be69",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page",
+                "post"
+            ],
+            "taxonomy": [],
+            "allow_null": 0,
+            "allow_archives": 0,
+            "multiple": 0
+        },
+        {
+            "key": "field_59fcb8964be6b",
+            "label": "Secondary Call to Action?",
+            "name": "secondary_call_to_action",
+            "type": "true_false",
+            "instructions": "Does this website have a secondary Call to Action? Creates secondary buttons across components.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_59fcb8b84be6c",
+            "label": "Secondary Call to Action Text",
+            "name": "secondary_call_to_action_text",
+            "type": "text",
+            "instructions": "Text to display on secondary Call to Action buttons.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59fcb8964be6b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Learn More",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59fcb8c34be6d",
+            "label": "Secondary Call to Action URL",
+            "name": "secondary_call_to_action_url",
+            "type": "page_link",
+            "instructions": "Text to display on secondary Call to Action buttons.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59fcb8964be6b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page",
+                "post"
+            ],
+            "taxonomy": [],
+            "allow_null": 0,
+            "allow_archives": 0,
+            "multiple": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "panda3d-theme-settings"
+            },
+            {
+                "param": "current_user_role",
+                "operator": "==",
+                "value": "administrator"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1527720435
+}
