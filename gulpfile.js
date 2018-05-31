@@ -33,15 +33,6 @@ var project                 = 'Panda3D'; // Project Name.
 var projectURL              = 'panda3d.test'; // Local project URL of your already running WordPress site. Could be something like local.dev or localhost:8888.
 var productURL              = './'; // Theme/Plugin URL. Leave it like it is, since our gulpfile.js lives in the root folder.
 
-// Translation related.
-var text_domain             = 'panda3d'; // Your textdomain here.
-var translationFile         = 'panda3d.pot'; // Name of the transalation file.
-var translationDestination  = './languages'; // Where to save the translation files.
-var packageName             = 'Panda3D'; // Package name.
-var bugReport               = 'https://joeyz.io/'; // Where can users report bugs.
-var lastTranslator          = 'Joey Ziolkowski <contact@joeyz.io>'; // Last translator Email ID.
-var team                    = 'Panda3D <etc-panda3d@lists.andrew.cmu.edu>'; // Team's Email ID.
-
 // Style related.
 var styleSRC                = './assets/sass/style.scss'; // Path to main .scss file.
 var styleDestination        = './'; // Path to place the compiled CSS file.
@@ -248,32 +239,6 @@ gulp.task( 'browser-sync', function() {
     .pipe(gulp.dest( imagesDestination ))
     .pipe( notify( { message: 'TASK: "images" Completed! 💯', onLast: true } ) );
  });
-
-
- /**
-  * WP POT Translation File Generator.
-  *
-  * * This task does the following:
-  *     1. Gets the source of all the PHP files
-  *     2. Sort files in stream by path or any custom sort comparator
-  *     3. Applies wpPot with the variable set at the top of this file
-  *     4. Generate a .pot file of i18n that can be used for l10n to build .mo file
-  */
- gulp.task( 'translate', function () {
-     return gulp.src( projectPHPWatchFiles )
-         .pipe(sort())
-         .pipe(wpPot( {
-             domain        : text_domain,
-             package       : packageName,
-             bugReport     : bugReport,
-             lastTranslator: lastTranslator,
-             team          : team
-         } ))
-        .pipe(gulp.dest(translationDestination + '/' + translationFile ))
-        .pipe( notify( { message: 'TASK: "translate" Completed! 💯', onLast: true } ) )
-
- });
-
 
  /**
   * Watch Tasks.
