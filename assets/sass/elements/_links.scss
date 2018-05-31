@@ -16,16 +16,13 @@ a {
 }
 
 .cta {
-    border: 2px solid transparent;
-    display: inline-block;
-    font-weight: 500;
-    padding: 0.25rem 0.5rem;
-	text-transform: uppercase;
+	border: 2px solid transparent;
+	border-radius: 3px;
+	display: inline-block;
+	font-weight: 100;
+    padding: 0.5rem 0.75rem;
+	text-decoration: none;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:hover, &:active, &:focus {
-        box-shadow: 0 4px 4px 0 rgba(#000, 0.3);
-    }
 }
 
 .cta--primary {
