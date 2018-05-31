@@ -8,8 +8,11 @@
  */
 
 get_header();
-panda3d_display_flexible_content();
-get_sidebar();
-get_footer();
+?>
 
-add_action( 'the_post', 'panda3d_display_flexible_content' );
+<div class="entry-content">
+    panda3d_display_flexible_content();
+</div>
+
+<?php
+get_footer();
