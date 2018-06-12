@@ -62,8 +62,8 @@
 		text-decoration: none;
 
 		&:hover, &:active, &:focus {
-			background-color: #fff;
-			color: #000;
+			border-bottom: 3px solid #fff;
+			outline: 0;
 		}
 	}
 
@@ -82,6 +82,7 @@
 		a {
 			&:hover, &:active, &:focus {
 				background-color: transparent;
+				border: 0;
 				color: #fff;
 			}
 		}
