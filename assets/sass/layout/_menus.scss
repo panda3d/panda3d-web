@@ -77,9 +77,12 @@
 	.cta--primary {
 		border: 0;
 		border-radius: 0;
-		padding: 0 1rem;
+		margin-left: 1rem;
+		padding: 0 0.5rem;
 
 		a {
+			font-weight: 400;
+
 			&:hover, &:active, &:focus {
 				background-color: transparent;
 				border: 0;

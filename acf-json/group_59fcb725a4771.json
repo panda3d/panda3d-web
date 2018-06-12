@@ -79,6 +79,33 @@
             "multiple": 0
         },
         {
+            "key": "field_5b202ca3fae44",
+            "label": "Primary Call to Action Icon",
+            "name": "primary_call_to_action_icon",
+            "type": "text",
+            "instructions": "Enter a FontAwesome Icon name. Supported icons can be found here: https:\/\/fontawesome.com\/icons.\r\n(Example: arrow-circle-down)",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59fcb7cf4be69",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "arrow-circle-down",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_59fcb8964be6b",
             "label": "Secondary Call to Action?",
             "name": "secondary_call_to_action",
@@ -153,6 +180,33 @@
             "allow_null": 0,
             "allow_archives": 0,
             "multiple": 0
+        },
+        {
+            "key": "field_5b202c1bfae43",
+            "label": "Secondary Call to Action Icon",
+            "name": "secondary_call_to_action_icon",
+            "type": "text",
+            "instructions": "Enter a FontAwesome Icon name. Supported icons can be found here: https:\/\/fontawesome.com\/icons.\r\n(Example: arrow-circle-down)",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59fcb8964be6b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "arrow-circle-down",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -177,5 +231,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1527720435
+    "modified": 1528835272
 }
