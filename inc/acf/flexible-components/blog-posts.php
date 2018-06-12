@@ -4,7 +4,7 @@
     $args = array(
         'post_type'      => 'post',
         'category_name'  => $blog_category,
-        'posts_per_page' => 3
+        'posts_per_page' => 4
     );
 
     $loop = new WP_Query( $args );
