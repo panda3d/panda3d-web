@@ -1,25 +1,23 @@
 .blog-posts {
-    padding: 2rem 0;
-
-     .wrap {
-          max-width: 1440px;
-          margin: 0 auto;
-          padding: 2px;
-     }
+    padding: $size__component-padding;
 }
 
 .blog-section-header {
-     display: flex;
-     justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .article__container {
-     display: grid;
-     grid-gap: 1.5rem;
+    display: grid;
+    grid-gap: 1.5rem;
 
-     @include breakpoint(large) {
-          grid-template-columns: repeat(4, 1fr);
-     }
+    @include breakpoint(medium) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include breakpoint(large) {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 .article {
@@ -28,7 +26,9 @@
     overflow: hidden;
     transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
-    &:hover, &:active, &:focus {
+    &:hover,
+    &:active,
+    &:focus {
         transform: scale(1.05);
     }
 

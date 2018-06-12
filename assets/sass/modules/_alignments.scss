@@ -14,3 +14,12 @@
 	clear: both;
 	@include center-block;
 }
+
+.wrap {
+    max-width: 1440px;
+	margin: 0 auto;
+
+	@include breakpoint(1500px, down) {
+		padding: 0 1rem;
+	}
+}

@@ -52,6 +52,7 @@ $color__border-abbr: #666;
  $size__site-main: 100%;
  $size__site-sidebar: 25%;
  $size__header-height: 55px;
+ $size__component-padding: 2rem 0;
 
  $columns: (
 	1: 100%,
@@ -64,7 +65,6 @@ $color__border-abbr: #666;
 	8: 12.5%,
 	9: 11.11%
 );
-
 $columns__margin: 3.8%;
 
 // Predefined breakpoints for Media Query mixin

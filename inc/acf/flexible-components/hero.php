@@ -1,4 +1,4 @@
-<div class="hero">
+<section class="hero">
     <div class="hero__wrap" style="background-image: url(<?php the_sub_field( 'background_image' ) ?>);">
         <div class="hero__content">
 
@@ -25,4 +25,4 @@
 
         </div>
     </div>
-</div>
+</section>
