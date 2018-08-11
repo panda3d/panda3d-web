@@ -1,0 +1,81 @@
+.brand-showcase {
+    padding: $size__component-padding;
+
+    .wrap {
+        max-width: 1600px;
+        display: grid;
+        grid-template-areas:
+            "info"
+            "logos";
+        grid-template-columns: 1fr;
+
+        @include breakpoint(large) {
+            grid-template-areas: "logos info";
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+.brand-showcase__logos {
+    grid-area: logos;
+    text-align: center;
+
+    img {
+        padding: 0 2rem;
+        transition: 0.2s filter;
+        max-width: 100%;
+        width: 33%;
+        animation: colorIval 10s linear infinite;
+    }
+
+    .img-1 {
+        animation-delay: 0;
+    }
+    .img-2 {
+        animation-delay: -2s;
+    }
+    .img-3 {
+        animation-delay: -4s;
+    }
+    .img-4 {
+        animation-delay: -6s;
+    }
+    .img-5 {
+        animation-delay: -8s;
+    }
+
+}
+
+.brand-showcase__info {
+    align-self: center;
+    grid-area: info;
+    padding: 2rem;
+
+    h1 {
+        margin-top: 0;
+    }
+
+    .cta {
+        @include font-size(1.2);
+        margin-top: 2rem;
+        padding: 0.75rem 1.25rem;
+    }
+}
+
+@keyframes colorIval {
+    0% {
+        filter: grayscale(100%);
+    }
+    5% {
+        filter: grayscale(0%);
+    }
+    20% {
+        filter: grayscale(0%);
+    }
+    25% {
+        filter: grayscale(100%);
+    }
+    100% {
+        filter: grayscale(100%);
+    }
+}

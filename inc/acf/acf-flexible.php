@@ -18,6 +18,8 @@ function panda3d_display_flexible_content() {
 			include 'flexible-components/plan.php';
 		} elseif ( get_row_layout() == 'blog_posts' ) {
 			include 'flexible-components/blog-posts.php';
+		} elseif ( get_row_layout() == 'brand_showcase' ) {
+			include 'flexible-components/brand-showcase.php';
 		}
 	endwhile;
 }
