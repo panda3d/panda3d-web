@@ -19,7 +19,8 @@ a {
 	border: 2px solid transparent;
 	border-radius: 3px;
 	display: inline-block;
-    padding: 1rem 1.5rem;
+	@include font-size(1.1);
+	padding: 1rem 1.5rem;
 	text-decoration: none;
 	transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
 				background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
