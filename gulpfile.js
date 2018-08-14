@@ -245,7 +245,7 @@ gulp.task( 'browser-sync', function() {
   *
   * Watches for file changes and runs specific tasks.
   */
- gulp.task( 'default', ['styles', 'bundleJS', 'images', 'browser-sync'], function () {
+ gulp.task('default', gulp.parallel('styles', 'bundleJS', 'images', 'browser-sync'), function() {
   gulp.watch( projectPHPWatchFiles, reload ); // Reload on PHP file changes.
   gulp.watch( styleWatchFiles, [ 'styles' ] ); // Reload on SCSS file changes.
   gulp.watch( jsWatchFiles, [ 'bundleJS', reload ] ); // Reload on bundleJS file changes.
