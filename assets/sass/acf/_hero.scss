@@ -1,7 +1,3 @@
-.hero {
-    padding-bottom: 1rem;
-}
-
 .hero__wrap {
     align-items: center;
     background-size: cover;
@@ -11,7 +7,7 @@
     min-height: 30rem;
 
     @include breakpoint(large) {
-        height: 65vh;
+        height: 80vh;
     }
 }
 
