@@ -91,7 +91,6 @@ var filter = require("gulp-filter"); // Enables you to work on a subset of the o
 var sourcemaps = require("gulp-sourcemaps"); // Maps code in a compressed file (E.g. style.css) back to it’s original position in a source file (E.g. structure.scss, which was later combined with other css files to generate style.css)
 var notify = require("gulp-notify"); // Sends message notification to you
 var browserSync = require("browser-sync").create(); // Reloads browser and injects CSS. Time-saving synchronised browser testing.
-var reload = browserSync.reload; // For manual browser reload.
 var wpPot = require("gulp-wp-pot"); // For generating the .pot file.
 var sort = require("gulp-sort"); // Recommended to prevent unnecessary changes in pot-file.
 
@@ -125,6 +124,16 @@ gulp.task("browser-sync", function(done) {
         // Use a specific port (instead of the one auto-detected by Browsersync).
         port: 8000
     });
+    done();
+});
+
+/**
+ * Task: `reload`.
+ *
+ * Manually reloads browser for changes that can't be injected.
+ */
+gulp.task("reload", function(done) {
+    browserSync.reload();
     done();
 });
 
@@ -181,9 +190,6 @@ gulp.task("styles", function() {
 
         .pipe(filter("**/*.css")) // Filtering stream to only css files
         .pipe(browserSync.stream()) // Reloads style.min.css if that is enqueued.
-        .pipe(
-            notify({ message: 'TASK: "styles" Completed! 💯', onLast: true })
-        );
 });
 
 /**
@@ -212,9 +218,6 @@ gulp.task("bundleJS", function() {
         .pipe(uglify())
         .pipe(lineec()) // Consistent Line Endings for non UNIX systems.
         .pipe(gulp.dest(jsDestination))
-        .pipe(
-            notify({ message: 'TASK: "bundleJs" Completed! 💯', onLast: true })
-        );
 });
 
 /**
@@ -242,9 +245,6 @@ gulp.task("images", function() {
             })
         )
         .pipe(gulp.dest(imagesDestination))
-        .pipe(
-            notify({ message: 'TASK: "images" Completed! 💯', onLast: true })
-        );
 });
 
 /**
@@ -258,9 +258,9 @@ gulp.task(
         gulp.parallel("styles", "bundleJS", "images"),
         "browser-sync",
         function() {
-            gulp.watch("./**/*.php", gulp.series(reload)); // Reload on PHP file changes.
+            gulp.watch("./**/*.php", gulp.series("reload")); // Reload on PHP file changes.
             gulp.watch("./assets/sass/**/*.scss", gulp.series("styles")); // Reload on SCSS file changes.
-            gulp.watch("./assets/js/**/*.js", gulp.series("bundleJS", reload)); // Reload on bundleJS file changes.
+            gulp.watch("./assets/js/**/*.js", gulp.series("bundleJS", "reload")); // Reload on bundleJS file changes.
         }
     )
 );
