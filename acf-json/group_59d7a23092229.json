@@ -42,25 +42,6 @@
                             "maxlength": ""
                         },
                         {
-                            "key": "field_59d7a3791ab6f",
-                            "label": "Subheader",
-                            "name": "subheader",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "Subheaders are nice, but not always necessary.",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
                             "key": "field_59d7a84af16b6",
                             "label": "Background Image",
                             "name": "background_image",
@@ -588,5 +569,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1528844990
+    "modified": 1534444482
 }

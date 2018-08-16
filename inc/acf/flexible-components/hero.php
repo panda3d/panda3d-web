@@ -3,9 +3,6 @@
         <div class="hero__content">
 
             <h1><?php the_sub_field('header') ?></h1>
-            <?php if(get_sub_field('subheader')) { ?>
-                <p class="subheader"><?php the_sub_field('subheader') ?></p>
-            <?php } ?>
 
             <div class="hero__calltoaction">
                 <?php if(get_field('primary_call_to_action', 'option')) { ?>
