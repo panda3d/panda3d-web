@@ -52,12 +52,9 @@
     }
 
     .cta {
-        margin-top: 1rem;
-
         &:not(:first-of-type) {
             @include breakpoint(medium) {
                 margin-left: 1.5rem;
-                margin-top: 0.5rem;
             }
         }
     }

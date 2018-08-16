@@ -366,6 +366,25 @@
                             "new_lines": ""
                         },
                         {
+                            "key": "field_5b75d53b5650c",
+                            "label": "Icon",
+                            "name": "icon",
+                            "type": "text",
+                            "instructions": "Enter a FontAwesome Icon name. Supported icons can be found here: https:\/\/fontawesome.com\/icons.\r\n(Example: arrow-circle-down)\r\n\r\nThis will display at a large size to the right of the header and description.",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "arrow-circle-down",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
                             "key": "field_5b75c932ef2df",
                             "label": "Display Primary Button?",
                             "name": "display_primary_button",
@@ -482,6 +501,33 @@
                                     "allow_null": 0,
                                     "allow_archives": 0,
                                     "multiple": 0
+                                },
+                                {
+                                    "key": "field_5b75d5905650d",
+                                    "label": "Primary Button Icon",
+                                    "name": "icon",
+                                    "type": "text",
+                                    "instructions": "Enter a FontAwesome Icon name. Supported icons can be found here: https:\/\/fontawesome.com\/icons.\r\n(Example: arrow-circle-down)",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5b75c3f38d28c",
+                                                "operator": "==",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "arrow-circle-down",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
                                 }
                             ]
                         },
@@ -602,6 +648,33 @@
                                     "allow_null": 0,
                                     "allow_archives": 0,
                                     "multiple": 0
+                                },
+                                {
+                                    "key": "field_5b75d5a75650e",
+                                    "label": "Secondary Button Icon",
+                                    "name": "icon",
+                                    "type": "text",
+                                    "instructions": "Enter a FontAwesome Icon name. Supported icons can be found here: https:\/\/fontawesome.com\/icons.\r\n(Example: arrow-circle-down)",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5b75c60a72c99",
+                                                "operator": "==",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "arrow-circle-down",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
                                 }
                             ]
                         }
@@ -809,5 +882,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1534448055
+    "modified": 1534449118
 }
