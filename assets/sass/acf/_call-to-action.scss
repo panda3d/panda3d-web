@@ -1,0 +1,75 @@
+.call-to-action {
+    align-items: center;
+    background: linear-gradient(90deg, darken($color__theme-purple, 5%), lighten($color__theme-purple, 20%));
+
+    @include breakpoint(medium down) {
+        text-align: center;
+    }
+}
+
+.call-to-action__container {
+    display: grid;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+
+    @include breakpoint(large) {
+        align-items: center;
+        grid-template-columns: 2fr 1fr;
+        padding: 3rem 0;
+        text-align: left;
+    }
+}
+
+.call-to-action__text {
+    margin-bottom: 1rem;
+
+    @include breakpoint(medium) {
+        margin-bottom: 2rem;
+    }
+
+    @include breakpoint(large) {
+        margin-bottom: 0;
+    }
+
+    h1 {
+        color: #fff;
+        margin: 0;
+    }
+
+    p.subheader {
+        color: $color__light;
+        font-size: 1.25rem;
+    }
+}
+
+.call-to-action__buttons {
+    a {
+        @include breakpoint(small only) {
+            display: block;
+        }
+    }
+
+    .cta {
+        margin-top: 1rem;
+
+        &:not(:first-of-type) {
+            @include breakpoint(medium) {
+                margin-left: 1.5rem;
+                margin-top: 0.5rem;
+            }
+        }
+    }
+
+    .cta--secondary {
+        border-color: #fff;
+        color: #fff;
+
+        &:hover,
+        &:active,
+        &:focus {
+            border-color: $color__cta-hover;
+        }
+    }
+}

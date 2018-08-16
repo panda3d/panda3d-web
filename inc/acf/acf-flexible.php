@@ -13,7 +13,7 @@ function panda3d_display_flexible_content() {
 		} elseif ( get_row_layout() == 'features' ) {
 			include 'flexible-components/features.php';
 		} elseif ( get_row_layout() == 'call_to_action' ) {
-			include 'flexible-components/calltoaction.php';
+			include 'flexible-components/call-to-action.php';
 		} elseif ( get_row_layout() == 'plan' ) {
 			include 'flexible-components/plan.php';
 		} elseif ( get_row_layout() == 'blog_posts' ) {
