@@ -3,10 +3,11 @@
  */
 
 // Theme color pallette
-$color__primary: #735CDD;
-$color__secondary: #FF3E41;
-$color__mid: #323031;
-$color__dark: #222;
+$color__theme-purple: #735CDD;
+$color__theme-red: #dd5c5c;
+$color__theme-blue: #5CA7DD;
+$color__light: #ccc;
+$color__dark: #323031;
 
 // Background colors
 $color__background-body: #f9f9f9;
@@ -27,8 +28,8 @@ $color__link-hover: midnightblue;
 $color__text-main: #404040;
 
 // Button colors
-$color__cta: $color__primary;
-$color__cta-hover: lighten($color__primary, 10%);
+$color__cta: $color__theme-purple;
+$color__cta-hover: lighten($color__theme-purple, 10%);
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
