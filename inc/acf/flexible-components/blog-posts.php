@@ -20,7 +20,7 @@
                 <?php if ($news_category === '') { ?>
                     <a href="/news/" class="cta--action">All Posts</a>
                 <?php } else { ?>
-                    <a href="/category/<?php echo $selected_category; ?>" class="cta--action">View More News</a>
+                    <a href="/category/<?php echo $selected_category; ?>" class="cta--action">View More</a>
                 <?php } ?>
             </div>
         </div>
@@ -32,12 +32,8 @@
                     <a href="<?php the_permalink(); ?>">
                         <div class="article__image" style="background-image: url('<?php the_post_thumbnail_url('large'); ?>');"></div>
                         <div class="article__info">
-                            <div class="article__title">
-                                <h3><?php the_title(); ?></h3>
-                            </div>
-                            <div class="article__details">
-                                <span><?php the_author(); ?> - <i><?php the_date('M j Y'); ?></i></span>
-                            </div>
+                            <span class="date"><?php the_date('F j, Y'); ?></span>
+                            <h2 class="title"><?php the_title(); ?></h2>
                         </div>
                     </a>
                 </div>

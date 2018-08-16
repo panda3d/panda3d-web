@@ -1,5 +1,9 @@
 .blog-posts {
     padding: $size__component-padding;
+
+    .wrap {
+        max-width: 1700px;
+    }
 }
 
 .blog-section-header {
@@ -23,6 +27,7 @@
 .article {
     background: #fff;
     border-radius: 4px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -42,17 +47,22 @@
 
 .article__info {
     color: $color__text-main;
-    padding: 2rem;
+    padding: 1.5rem 2rem;
     max-height: 100%;
     text-decoration: none;
 
-    h3 {
-        margin: 0;
+    .date {
+        color: $color__theme-blue;
+        text-transform: uppercase;
     }
-}
 
-.article__details {
-    font-weight: normal;
+    .title {
+        color: #555;
+        font-weight: normal;
+        line-height: 1.2;
+        margin: 0;
+        text-transform: unset;
+    }
 }
 
 .article__image {
@@ -63,10 +73,14 @@
 }
 
 .blog-posts__more {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     text-align: center;
 
     @include breakpoint(medium) {
         text-align: right;
+    }
+
+    .cta {
+        padding: 0.5rem 1.0rem;
     }
 }
