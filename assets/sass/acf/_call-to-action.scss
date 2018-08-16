@@ -62,6 +62,18 @@
         }
     }
 
+    .cta--primary {
+        border-color: $color__cta-alt;
+        background-color: $color__cta-alt;
+
+        &:hover,
+        &:active,
+        &:focus {
+            border-color: $color__cta-alt-hover;
+            background-color: $color__cta-alt-hover;
+        }
+    }
+
     .cta--secondary {
         border-color: #fff;
         color: #fff;
@@ -69,7 +81,7 @@
         &:hover,
         &:active,
         &:focus {
-            border-color: $color__cta-hover;
+            border-color: $color__cta-alt-hover;
         }
     }
 }

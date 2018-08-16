@@ -30,6 +30,8 @@ $color__text-main: #404040;
 // Button colors
 $color__cta: $color__theme-purple;
 $color__cta-hover: lighten($color__theme-purple, 10%);
+$color__cta-alt: $color__theme-red;
+$color__cta-alt-hover: lighten($color__theme-red, 10%);
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
