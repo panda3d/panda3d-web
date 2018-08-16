@@ -6,16 +6,34 @@
             <p class="subheader"><?php the_sub_field('description') ?></p>
 
             <div class="call-to-action__buttons">
-                <?php if(get_field('secondary_call_to_action', 'option')) { ?>
-                    <a href="<?php the_field('secondary_call_to_action_url', 'option'); ?>" class="cta--secondary">
-                        <?php the_field('secondary_call_to_action_text', 'option'); ?>
-                    </a>
+                <?php if(get_sub_field('display_secondary_button')) { ?>
+                    <?php $secondary_button = get_sub_field('custom_secondary_button'); ?>
+                    <?php if($secondary_button['override']) { ?>
+                        <a href="<?php echo $secondary_button['url']; ?>" class="cta--secondary">
+                            <?php echo $secondary_button['label']; ?>
+                        </a>
+                    <?php } else { ?>
+                        <?php if(get_field('secondary_call_to_action', 'option')) { ?>
+                            <a href="<?php the_field('secondary_call_to_action_url', 'option'); ?>" class="cta--secondary">
+                                <?php the_field('secondary_call_to_action_text', 'option'); ?>
+                            </a>
+                        <?php } ?>
+                    <?php } ?>
                 <?php } ?>
 
-                <?php if(get_field('primary_call_to_action', 'option')) { ?>
-                    <a href="<?php the_field('primary_call_to_action_url', 'option'); ?>" class="cta--primary">
-                        <?php the_field('primary_call_to_action_text', 'option'); ?>
-                    </a>
+                <?php if(get_sub_field('display_primary_button')) { ?>
+                    <?php $primary_button = get_sub_field('custom_primary_button'); ?>
+                    <?php if($primary_button['override']) { ?>
+                        <a href="<?php echo $primary_button['url']; ?>" class="cta--primary">
+                            <?php echo $primary_button['label']; ?>
+                        </a>
+                    <?php } else { ?>
+                        <?php if(get_field('primary_call_to_action', 'option')) { ?>
+                            <a href="<?php the_field('primary_call_to_action_url', 'option'); ?>" class="cta--primary">
+                                <?php the_field('primary_call_to_action_text', 'option'); ?>
+                            </a>
+                        <?php } ?>
+                    <?php } ?>
                 <?php } ?>
             </div>
 

@@ -364,6 +364,246 @@
                             "maxlength": "",
                             "rows": "",
                             "new_lines": ""
+                        },
+                        {
+                            "key": "field_5b75c932ef2df",
+                            "label": "Display Primary Button?",
+                            "name": "display_primary_button",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_5b75c90bef2de",
+                            "label": "Custom Primary Button",
+                            "name": "custom_primary_button",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5b75c932ef2df",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5b75c3f38d28c",
+                                    "label": "Override Primary Button?",
+                                    "name": "override",
+                                    "type": "true_false",
+                                    "instructions": "Enable this to override the primary Call to Action button and replace it with a custom one.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui": 1,
+                                    "ui_on_text": "",
+                                    "ui_off_text": ""
+                                },
+                                {
+                                    "key": "field_5b75c4998d28d",
+                                    "label": "Primary Button Label",
+                                    "name": "label",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5b75c3f38d28c",
+                                                "operator": "==",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_5b75c4c48d28e",
+                                    "label": "Primary Button URL",
+                                    "name": "url",
+                                    "type": "page_link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5b75c3f38d28c",
+                                                "operator": "==",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "post_type": [
+                                        "post",
+                                        "page"
+                                    ],
+                                    "taxonomy": [],
+                                    "allow_null": 0,
+                                    "allow_archives": 0,
+                                    "multiple": 0
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_5b75c8ccef2dd",
+                            "label": "Display Secondary Button?",
+                            "name": "display_secondary_button",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_5b75c883ef2dc",
+                            "label": "Custom Secondary Button",
+                            "name": "custom_secondary_button",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5b75c8ccef2dd",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5b75c60a72c99",
+                                    "label": "Override Secondary Button?",
+                                    "name": "override",
+                                    "type": "true_false",
+                                    "instructions": "Enable this to override the secondary Call to Action button and replace it with a custom one.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui": 1,
+                                    "ui_on_text": "",
+                                    "ui_off_text": ""
+                                },
+                                {
+                                    "key": "field_5b75c62072c9a",
+                                    "label": "Secondary Button Label",
+                                    "name": "label",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5b75c60a72c99",
+                                                "operator": "==",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_5b75c63172c9b",
+                                    "label": "Secondary Button URL",
+                                    "name": "url",
+                                    "type": "page_link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5b75c60a72c99",
+                                                "operator": "==",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "post_type": [
+                                        "post",
+                                        "page"
+                                    ],
+                                    "taxonomy": [],
+                                    "allow_null": 0,
+                                    "allow_archives": 0,
+                                    "multiple": 0
+                                }
+                            ]
                         }
                     ],
                     "min": "",
@@ -569,5 +809,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1534444482
+    "modified": 1534448055
 }
