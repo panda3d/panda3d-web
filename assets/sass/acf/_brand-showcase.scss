@@ -25,23 +25,23 @@
         transition: 0.2s filter;
         max-width: 100%;
         width: 33%;
-        animation: colorIval 10s linear infinite;
+        animation: colorIval 5s linear infinite;
     }
 
     .img-1 {
-        animation-delay: 0;
-    }
-    .img-2 {
-        animation-delay: -2s;
-    }
-    .img-3 {
         animation-delay: -4s;
     }
+    .img-2 {
+        animation-delay: -3s;
+    }
+    .img-3 {
+        animation-delay: -2s;
+    }
     .img-4 {
-        animation-delay: -6s;
+        animation-delay: -1s;
     }
     .img-5 {
-        animation-delay: -8s;
+        animation-delay: 0;
     }
 
 }
