@@ -3,12 +3,9 @@
  */
  @mixin clearfix() {
 	content: "";
+	clear: both;
 	display: table;
 	table-layout: fixed;
-}
-// Clear after (Some clearfix need this too)
-@mixin clearfix-after() {
-	clear: both;
 }
 
 
