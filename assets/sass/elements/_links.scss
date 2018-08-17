@@ -52,23 +52,27 @@ a {
 
 .cta--action {
 	@extend .cta;
-	border-bottom-color: $color__text-main;
+	background-color: transparent !important;
+	border-bottom: 3px solid $color__theme-blue;
+	font-weight: bold;
 	color: $color__text-main;
+	padding: 0.3rem 0.75rem;
+	transition: all $anim__duration-hover $anim__function-easein;
 
 	&:hover, &:active, &:focus {
-		border-bottom-color: $cta__color-hover;
 		box-shadow: none;
+		border-color:  lighten($color__theme-blue, 10%);
 		color: $color__text-main;
 
 		&:after {
-			padding-left: 12px;
+			padding-left: 16px;
 		}
 	}
 
 	&:after {
 		content: '';
 		font-family: FontAwesome;
-		padding-left: 8px;
+		padding-left: 10px;
 		transition: 0.1s padding-left linear;
 	}
 }
