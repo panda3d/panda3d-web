@@ -55,14 +55,14 @@ a {
 	background-color: transparent !important;
 	border-bottom: 3px solid $color__theme-blue;
 	font-weight: bold;
-	color: $color__text-main;
+	color: $color__mid;
 	padding: 0.3rem 0.75rem;
 	transition: all $anim__duration-hover $anim__function-easein;
 
 	&:hover, &:active, &:focus {
 		box-shadow: none;
 		border-color:  lighten($color__theme-blue, 10%);
-		color: $color__text-main;
+		color: $color__mid;
 
 		&:after {
 			padding-left: 16px;

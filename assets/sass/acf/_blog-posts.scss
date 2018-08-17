@@ -56,11 +56,12 @@
 
     .date {
         color: $color__theme-blue;
+        @include font-size(0.95);
         text-transform: uppercase;
     }
 
     .title {
-        color: #555;
+        color: $color__mid;
         font-weight: normal;
         line-height: 1.2;
         margin: 0;
