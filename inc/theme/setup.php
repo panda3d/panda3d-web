@@ -29,7 +29,10 @@ if ( ! function_exists( 'panda3d_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'panda3d' ),
+			'primary-menu'  => esc_html__( 'Primary Menu', 'panda3d' ),
+			'footer-menu-1' => esc_html__( 'Footer Menu 1', 'panda3d' ),
+			'footer-menu-2' => esc_html__( 'Footer Menu 2', 'panda3d' ),
+			'footer-menu-3' => esc_html__( 'Footer Menu 3', 'panda3d' ),
 		) );
 
 		/*

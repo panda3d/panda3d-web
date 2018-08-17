@@ -8,3 +8,8 @@
     text-align: center;
     width: 100%;
 }
+
+.footer__navigation {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
