@@ -14,10 +14,7 @@
 
         a {
             height: 100%;
-
-            &:hover, &:active, &:focus {
-                background-color: darken($color__background-header, 5%);
-            }
+            @include transition-color-slide(transparent, darken($color__background-header, 5%));
         }
 
         img {
