@@ -22,10 +22,10 @@ a {
 	@include font-size(1.1);
 	padding: 1rem 1.5rem;
 	text-decoration: none;
-	transition: background-position 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-				background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-				border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-				color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+	transition: background-position $anim__duration-hover cubic-bezier(0.4, 0, 0.2, 1),
+				background-color $anim__duration-hover cubic-bezier(0.4, 0, 0.2, 1),
+				border-color $anim__duration-hover cubic-bezier(0.4, 0, 0.2, 1),
+				color $anim__duration-hover cubic-bezier(0.4, 0, 0.2, 1);
 
 	&:hover, &:active, &:focus {
 		background-color: $cta__color-hover;

@@ -26,14 +26,17 @@
 
 .article {
     background: #fff;
+    border-bottom: 3px solid $color__theme-blue;
     border-radius: 4px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform $anim__duration-hover cubic-bezier(0.4, 0, 0.2, 1),
+                border-color $anim__duration-hover cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover,
     &:active,
     &:focus {
+        border-color: lighten($color__theme-blue, 10%);
         transform: scale(1.05);
     }
 
