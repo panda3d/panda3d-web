@@ -1,0 +1,87 @@
+$plan-bg: $light-gray;
+$plan-divider-color: $medium-gray;
+
+.plan {
+    padding: 3rem 0;
+
+    @include breakpoint(small-only) {
+        padding: 1rem;
+    }
+}
+
+.plan__outer {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 90rem;
+    text-align: center;
+
+    h1, p {
+        margin: 0;
+    }
+}
+
+.plan__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 0.5rem;
+    text-align: center;
+
+    @include breakpoint(medium) {
+        padding: 3rem 0 4rem;
+        text-align: left;
+    }
+
+    .fa {
+        color: $primary;
+        font-size: 4rem;
+        margin: 0 auto;
+
+        @include breakpoint(medium) {
+            margin-right: 1.25rem;
+        }
+    }
+}
+
+.plan__feature {
+    display: flex;
+    align-items: flex-start;
+    padding: 1rem;
+    flex: 1 0 100%;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    @include breakpoint(480px) {
+        flex: 1 0 50%;
+    }
+
+    @include breakpoint(medium) {
+        flex: 1 0 25%;
+        padding: 0 2rem;
+        justify-content: flex-start;
+        flex-direction: row;
+    }
+}
+
+.plan__calltoaction {
+    padding-bottom: 2rem;
+    text-align: center;
+
+    a {
+        font-size: 1.25rem;
+
+        @include breakpoint(small-only) {
+              display: block;
+        }
+    }
+
+    .cta {
+        margin-top: 1rem;
+
+        @include breakpoint(medium) {
+            margin-left: 2rem;
+            margin-top: 0;
+        }
+    }
+}

@@ -45,7 +45,7 @@
  @mixin transition-color-slide($start-color, $end-color, $duration: $anim__duration-hover) {
 	@include background-duotone($start-color, $end-color);
 	background-size: 100% 200%;
-	transition: all $duration cubic-bezier(0.4, 0, 0.2, 1);
+	transition: all $duration $anim__function-easein;
 
 	&:hover, &:active, &:focus {
 		background-position: 0 100%;
