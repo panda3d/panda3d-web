@@ -1,15 +1,43 @@
 #footer {
     background: $color__background-header;
+    border-top: 5px solid;
+    border-color: $color__theme-purple;
+    border-image: linear-gradient(90deg, darken($color__theme-purple, 5%), lighten($color__theme-purple, 20%)) 30;
     color: #fff;
-    font-weight: 100;
     margin: $size__component-padding;
     margin-bottom: 0;
-    padding: 1rem;
-    text-align: center;
     width: 100%;
 }
 
 .footer__navigation {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    padding: 2rem 0 4rem;
+
+    h2 {
+        margin-bottom: 0.5rem;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        a {
+            color: #fff;
+            text-decoration: none;
+
+            &:hover, &:active, &:focus {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.footer__copyright {
+    font-weight: 100;
+    padding: 1rem;
+    text-align: center;
 }

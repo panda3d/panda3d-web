@@ -35,7 +35,7 @@
 				<?php } ?>
 			</div>
 
-			<div class="site-info">
+			<div class="footer__copyright">
 				<span>© 2010-<?php echo date("Y"); ?> Carnegie Mellon University</span>
 			</div>
 		</div>
