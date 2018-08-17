@@ -16,33 +16,23 @@
 	<footer id="footer" class="site-footer">
 		<div class="wrap">
 			<div class="footer__navigation">
-				<div class="footer__menu footer__menu--1">
-					<h2>Test Menu 1</h2>
-					<?php
-					wp_nav_menu( array(
-						'theme_location' => 'footer-menu-1',
-						'menu_id'        => 'footer-menu-1',
-					) );
-					?>
-				</div>
-				<div class="footer__menu footer__menu--2">
-					<h2>Test Menu 2</h2>
-					<?php
-					wp_nav_menu( array(
-						'theme_location' => 'footer-menu-2',
-						'menu_id'        => 'footer-menu-2',
-					) );
-					?>
-				</div>
-				<div class="footer__menu footer__menu--3">
-					<h2>Test Menu 3</h2>
-					<?php
-					wp_nav_menu( array(
-						'theme_location' => 'footer-menu-3',
-						'menu_id'        => 'footer-menu-3',
-					) );
-					?>
-				</div>
+				<?php
+				// Cycle through theme locations to retrieve custom menu and title
+				$locations = get_nav_menu_locations();
+				$footer_locations = array('footer-menu-1', 'footer-menu-2', 'footer-menu-3');
+				?>
+				<?php foreach($footer_locations as $location) { ?>
+					<div class="footer__menu">
+						<?php $menu_id = $locations[$location]; ?>
+						<h2><?php $nav_menu = wp_get_nav_menu_object($menu_id); echo $nav_menu->name; ?></h2>
+						<?php
+						wp_nav_menu( array(
+							'theme_location' => $location,
+							'menu_id'        => $location,
+						) );
+						?>
+					</div>
+				<?php } ?>
 			</div>
 
 			<div class="site-info">
