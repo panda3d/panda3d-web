@@ -27,12 +27,29 @@
 	margin-right: auto;
 }
 
+/**
+ * Duotone Background
+ * Sets up a gradient with two solid colors, used for animation such as color
+ * sliding. Also sets background color as a fallback.
+ */
+@mixin background-duotone($start-color, $end-color) {
+	background-color: $start-color;
+	background-image: linear-gradient(to bottom, $start-color 50%, $end-color 50%);
+}
+
 
 /**
- * Column width with margin
+ * Color Slide Transition
+ * Slides a color up from the bottom of the element on hover, with a background color fade fallback.
  */
-@mixin column-width($numberColumns: 3) {
-	width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+ @mixin transition-color-slide($start-color, $end-color, $duration: $anim__duration-hover) {
+	@include background-duotone($start-color, $end-color);
+	background-size: 100% 200%;
+	transition: all $duration cubic-bezier(0.4, 0, 0.2, 1);
+
+	&:hover, &:active, &:focus {
+		background-position: 0 100%;
+	}
 }
 
 

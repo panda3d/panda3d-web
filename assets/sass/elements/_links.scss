@@ -16,20 +16,14 @@ a {
 }
 
 .cta {
-	background-size: 100% 200%;
 	border-radius: $cta__border-radius;
 	display: inline-block;
 	@include font-size(1.1);
 	padding: 1rem 1.5rem;
 	text-decoration: none;
-	transition: background-position $anim__duration-hover cubic-bezier(0.4, 0, 0.2, 1),
-				background-color $anim__duration-hover cubic-bezier(0.4, 0, 0.2, 1),
-				border-color $anim__duration-hover cubic-bezier(0.4, 0, 0.2, 1),
-				color $anim__duration-hover cubic-bezier(0.4, 0, 0.2, 1);
 
 	&:hover, &:active, &:focus {
 		background-color: $cta__color-hover;
-		background-position: 0 100%;
 		color: #fff;
 	}
 
@@ -40,17 +34,16 @@ a {
 
 .cta--primary {
 	@extend .cta;
-	background-color: $cta__color;
-    background-image: linear-gradient(to bottom, $cta__color 50%, $cta__color-hover 50%);
+	@include transition-color-slide($cta__color, $cta__color-hover);
 	color: #fff;
 	padding: calc(1rem + #{$cta__border-size}) calc(1.5rem + #{$cta__border-size});
 }
 
 .cta--secondary {
 	@extend .cta;
+	@include transition-color-slide(transparent, $cta__color-hover);
 	border: $cta__border-size solid $cta__color;
 	color: $cta__color;
-	background-image: linear-gradient(to bottom, transparent 50%, $cta__color-hover 50%);
 
 	&:hover, &:active, &:focus {
 		border-color: $cta__color-hover;
