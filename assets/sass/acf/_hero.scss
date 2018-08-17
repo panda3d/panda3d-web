@@ -66,7 +66,6 @@
 
         &:hover, &:active, &:focus {
             outline: none;
-            transform: scale(1.05);
         }
     }
 
@@ -80,7 +79,7 @@
 
         &:hover, &:active, &:focus {
             background-color: rgba(#000, 0.1);
-            border-color: $color__cta-hover;
+            border-color: $cta__color-hover;
         }
     }
 }

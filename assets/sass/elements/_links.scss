@@ -16,16 +16,22 @@ a {
 }
 
 .cta {
-	border: 2px solid transparent;
-	border-radius: 3px;
+	background-size: 100% 200%;
+	border-radius: $cta__border-radius;
 	display: inline-block;
 	@include font-size(1.1);
 	padding: 1rem 1.5rem;
 	text-decoration: none;
-	transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-				background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-				border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-				color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+	transition: background-position 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+				background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+				border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+				color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+	&:hover, &:active, &:focus {
+		background-color: $cta__color-hover;
+		background-position: 0 100%;
+		color: #fff;
+	}
 
 	svg {
 		margin-right: 0.25rem;
@@ -34,26 +40,20 @@ a {
 
 .cta--primary {
 	@extend .cta;
-	background-color: $color__cta;
-	border: 2px solid $color__cta;
+	background-color: $cta__color;
+    background-image: linear-gradient(to bottom, $cta__color 50%, $cta__color-hover 50%);
 	color: #fff;
-
-	&:hover, &:active, &:focus {
-		background: $color__cta-hover;
-		border-color: $color__cta-hover;
-		color: #fff;
-	}
+	padding: calc(1rem + #{$cta__border-size}) calc(1.5rem + #{$cta__border-size});
 }
 
 .cta--secondary {
 	@extend .cta;
-	border-color: $color__cta;
-	color: $color__cta;
+	border: $cta__border-size solid $cta__color;
+	color: $cta__color;
+	background-image: linear-gradient(to bottom, transparent 50%, $cta__color-hover 50%);
 
 	&:hover, &:active, &:focus {
-		background-color: $color__cta-hover;
-		border-color: $color__cta-hover;
-		color: #fff;
+		border-color: $cta__color-hover;
 	}
 }
 
@@ -63,7 +63,7 @@ a {
 	color: $color__text-main;
 
 	&:hover, &:active, &:focus {
-		border-bottom-color: $color__cta-hover;
+		border-bottom-color: $cta__color-hover;
 		box-shadow: none;
 		color: $color__text-main;
 

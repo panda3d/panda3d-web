@@ -60,14 +60,13 @@
     }
 
     .cta--primary {
-        border-color: $color__cta-alt;
-        background-color: $color__cta-alt;
+        background-color: $cta__color-alt;
+        background-image: linear-gradient(to bottom, $cta__color-alt 50%, $cta__color-alt-hover 50%);
 
         &:hover,
         &:active,
         &:focus {
-            border-color: $color__cta-alt-hover;
-            background-color: $color__cta-alt-hover;
+            background-color: $cta__color-alt-hover;
         }
     }
 
@@ -78,7 +77,7 @@
         &:hover,
         &:active,
         &:focus {
-            border-color: $color__cta-alt-hover;
+            border-color: $cta__color-alt-hover;
         }
     }
 }

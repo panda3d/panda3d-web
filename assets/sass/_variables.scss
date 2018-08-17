@@ -28,10 +28,6 @@ $color__link-hover: midnightblue;
 $color__text-main: #404040;
 
 // Button colors
-$color__cta: $color__theme-purple;
-$color__cta-hover: lighten($color__theme-purple, 10%);
-$color__cta-alt: $color__theme-red;
-$color__cta-alt-hover: lighten($color__theme-red, 10%);
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
@@ -87,3 +83,14 @@ $breakpoints: (
 	xxlarge: (
 		min: 1440px)
 );
+
+
+/**
+ * Buttons
+ */
+$cta__color: $color__theme-purple;
+$cta__color-hover: lighten($color__theme-purple, 10%);
+$cta__color-alt: $color__theme-red;
+$cta__color-alt-hover: lighten($color__theme-red, 10%);
+$cta__border-size: 2px;
+$cta__border-radius: 3px;
