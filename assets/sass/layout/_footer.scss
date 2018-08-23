@@ -15,8 +15,28 @@
 
 .footer__navigation {
     display: grid;
-    grid-template-columns: repeat(3, 2fr) 3fr;
-    padding: 4rem 0 5rem;
+    grid-template-columns: 1fr;
+    padding: 1rem 0 0;
+    text-align: center;
+
+    @include breakpoint(medium) {
+        grid-template-columns: 1fr 1fr;
+        padding: 3rem 0 4rem;
+        text-align: left;
+    }
+
+    @include breakpoint(large) {
+        grid-template-columns: repeat(3, 2fr) 3fr;
+        padding: 4rem 0 5rem;
+    }
+
+    > div {
+        padding: 1.5rem 0;
+
+        @include breakpoint(large) {
+            padding: 0;
+        }
+    }
 
     h2 {
         margin: 0 0 0.5rem;
@@ -41,6 +61,13 @@
 }
 
 .footer__social {
+    text-align: left;
+    margin-top: 1.5rem;
+
+    @include breakpoint(medium) {
+        margin-top: 0;
+    }
+
     > a {
         color: $color__light;
         display: inline-block;
@@ -74,6 +101,11 @@
         color: lighten($color__theme-purple, 20%);
         float: left;
         margin: 0.25rem 2rem 0 0;
+
+        @include breakpoint(medium, only) {
+            margin: 0.25rem 0.25rem 0 0;
+            padding: 0.75rem;
+        }
     }
 
     a {
