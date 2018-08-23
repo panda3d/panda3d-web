@@ -21,11 +21,15 @@
     text-align: center;
 
     img {
-        padding: 0 2rem;
+        padding: 0 1rem;
         transition: 0.2s filter;
         max-width: 100%;
-        width: 33%;
+        width: 32%;
         animation: colorIval 5s linear infinite;
+
+        @include breakpoint(medium) {
+            padding: 0 2rem;
+        }
     }
 
     .img-1 {
