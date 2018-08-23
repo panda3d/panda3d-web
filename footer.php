@@ -33,6 +33,16 @@
 						?>
 					</div>
 				<?php } ?>
+
+				<div class="footer__social">
+					<div class="footer__textblock">
+						<i class="fal fa-comment-alt-dots fa-flip-horizontal fa-5x"></i>
+						Want to chat with other developers, or ask questions about Panda3D? Join our IRC channel: <a target="_blank" href="irc://irc.freenode.net/panda3d">#panda3d</a> on <a target="_blank" href="https://freenode.net/">FreeNode</a>.
+					</div>
+					<a href="#"><i class="fab fa-facebook-square fa-3x"></i></a>
+					<a href="#"><i class="fab fa-github-square fa-3x"></i></a>
+					<a href="#"><i class="fab fa-reddit-square fa-3x"></i></a>
+				</div>
 			</div>
 
 			<div class="footer__copyright">
