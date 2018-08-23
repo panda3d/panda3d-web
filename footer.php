@@ -39,14 +39,16 @@
 						<i class="fal fa-comment-alt-dots fa-flip-horizontal fa-5x"></i>
 						Want to chat with other developers, or ask questions about Panda3D? Join our IRC channel: <a target="_blank" href="irc://irc.freenode.net/panda3d">#panda3d</a> on <a target="_blank" href="https://freenode.net/">FreeNode</a>.
 					</div>
-					<a href="#"><i class="fab fa-facebook-square fa-3x"></i></a>
-					<a href="#"><i class="fab fa-github-square fa-3x"></i></a>
-					<a href="#"><i class="fab fa-reddit-square fa-3x"></i></a>
+					<?php if(have_rows('social_icons', 'option')): ?>
+						<?php while(have_rows('social_icons', 'option')): the_row(); ?>
+							<a href="<?php the_sub_field('social_url'); ?>" target="_blank"><i title=""<?php the_sub_field('social_name'); ?>" class="fab fa-<?php the_sub_field('social_icon'); ?> fa-3x"></i></a>
+						<?php endwhile; ?>
+					<?php endif; ?>
 				</div>
 			</div>
 
 			<div class="footer__copyright">
-				<span>© 2010-<?php echo date("Y"); ?> Carnegie Mellon University</span>
+				<span>© <?php the_field('copyright_year', 'option'); ?>-<?php echo date("Y"); ?> <?php the_field('copyright_holder', 'option'); ?></span>
 			</div>
 		</div>
 	</footer>

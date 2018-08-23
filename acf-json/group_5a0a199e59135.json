@@ -3,6 +3,81 @@
     "title": "Footer",
     "fields": [
         {
+            "key": "field_5b7f098116e33",
+            "label": "Social Icons",
+            "name": "social_icons",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_5b7f0cca16e35",
+            "min": 0,
+            "max": 6,
+            "layout": "table",
+            "button_label": "Add Icon",
+            "sub_fields": [
+                {
+                    "key": "field_5b7f0d4f16e36",
+                    "label": "Social Icon",
+                    "name": "social_icon",
+                    "type": "text",
+                    "instructions": "Enter a FontAwesome Icon name. Supported icons can be found here: https:\/\/fontawesome.com\/icons.\r\n(Example: facebook-square)\r\n\r\nThis will display at a large size to the right of the header and description.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "facebook-square",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5b7f0cca16e35",
+                    "label": "Social Name",
+                    "name": "social_name",
+                    "type": "text",
+                    "instructions": "The name of the Social Network being linked to for accessibility.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "Panda3D on Facebook",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5b7f0c2616e34",
+                    "label": "Social URL",
+                    "name": "social_url",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "https:\/\/facebook.com\/panda3d"
+                }
+            ]
+        },
+        {
             "key": "field_5b0f2537021e0",
             "label": "Copyright Year",
             "name": "copyright_year",
@@ -65,5 +140,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1527719385
+    "modified": 1535053749
 }
