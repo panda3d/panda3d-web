@@ -30,14 +30,12 @@ a {
 }
 
 .cta--primary {
-	@extend .cta;
 	@include transition-color-slide($cta__color, $cta__color-hover);
 	color: #fff;
 	padding: calc(1rem + #{$cta__border-size}) calc(1.5rem + #{$cta__border-size});
 }
 
 .cta--secondary {
-	@extend .cta;
 	@include transition-color-slide(transparent, $cta__color-hover);
 	border: $cta__border-size solid $cta__color;
 	color: $cta__color;
@@ -48,7 +46,6 @@ a {
 }
 
 .cta--action {
-	@extend .cta;
 	background-color: transparent !important;
 	border-bottom: 3px solid $color__theme-blue;
 	font-weight: bold;

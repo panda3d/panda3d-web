@@ -18,9 +18,9 @@
 
             <div class="blog-posts__more">
                 <?php if ($news_category === '') { ?>
-                    <a href="/news/" class="cta--action">All Posts</a>
+                    <a href="/news/" class="cta cta--action">All Posts</a>
                 <?php } else { ?>
-                    <a href="/category/<?php echo $selected_category; ?>" class="cta--action">View More</a>
+                    <a href="/category/<?php echo $selected_category; ?>" class="cta cta--action">View More</a>
                 <?php } ?>
             </div>
         </div>

@@ -20,13 +20,13 @@
 
         <div class="plan__calltoaction">
             <?php if(get_field('secondary_call_to_action', 'option')) { ?>
-                <a href="<?php the_field('secondary_call_to_action_url', 'option'); ?>" class="cta--secondary">
+                <a href="<?php the_field('secondary_call_to_action_url', 'option'); ?>" class="cta cta--secondary">
                     <?php the_field('secondary_call_to_action_text', 'option'); ?>
                 </a>
             <?php } ?>
 
             <?php if(get_field('primary_call_to_action', 'option')) { ?>
-                <a href="<?php the_field('primary_call_to_action_url', 'option'); ?>" class="cta--primary">
+                <a href="<?php the_field('primary_call_to_action_url', 'option'); ?>" class="cta cta--primary">
                     <?php the_field('primary_call_to_action_text', 'option'); ?>
                 </a>
             <?php } ?>

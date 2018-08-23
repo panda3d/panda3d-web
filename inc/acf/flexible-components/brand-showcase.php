@@ -13,7 +13,7 @@
             <h1><?php the_sub_field('header') ?></h1>
             <div><?php the_sub_field('description') ?></div>
 
-            <a class="cta--secondary" href="#"><i class="fas fa-gamepad"></i> View Showcase</a>
+            <a class="cta cta--secondary" href="#"><i class="fas fa-gamepad"></i> View Showcase</a>
         </div>
 
     </div>
