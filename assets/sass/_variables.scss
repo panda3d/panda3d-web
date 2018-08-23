@@ -23,9 +23,8 @@ $color__background-header: $color__dark;
 $color__text-screen: #21759b;
 $color__text-input: #666;
 $color__text-input-focus: #111;
-$color__link: royalblue;
-$color__link-visited: purple;
-$color__link-hover: midnightblue;
+$color__link: $color__theme-blue;
+$color__link-hover: lighten($color__theme-blue, 10%);
 $color__text-main: #404040;
 
 // Button colors
