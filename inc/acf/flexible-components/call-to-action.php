@@ -1,4 +1,4 @@
-<div class="call-to-action">
+<section class="call-to-action">
     <div class="call-to-action__container">
 
         <div class="call-to-action__text">
@@ -48,4 +48,4 @@
         </div>
 
     </div>
-</div>
+</section>
