@@ -22,6 +22,8 @@ function panda3d_display_flexible_content() {
 			include 'flexible-components/brand-showcase.php';
 		} elseif ( get_row_layout() == 'choices' ) {
 			include 'flexible-components/choices.php';
+		} elseif ( get_row_layout() == 'call_to_action_alt' ) {
+			include 'flexible-components/call-to-action-alt.php';
 		}
 	endwhile;
 }
