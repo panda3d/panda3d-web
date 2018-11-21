@@ -11,12 +11,8 @@
 .choices__container {
     max-width: 75rem;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 3rem 0;
     text-align: center;
-
-    @include breakpoint(large) {
-        padding: 3rem 0;
-    }
 }
 
 .choices__text {
@@ -46,25 +42,23 @@
 
     a {
         @include font-size(1.25);
+        margin-bottom: 2rem;
         padding: 1.5rem;
-        width: 20%;
+        width: 100%;
 
-        @include breakpoint(small only) {
-            display: block;
+        @include breakpoint(medium) {
+            width: 20%;
+            margin-bottom: 0;
+
+            &:not(:first-of-type) {
+                margin-left: 3rem;
+            }
         }
 
         svg {
             display: block;
             @include font-size(2.5);
             margin: 0 auto 0.5rem;
-        }
-    }
-
-    .cta {
-        &:not(:first-of-type) {
-            @include breakpoint(medium) {
-                margin-left: 3rem;
-            }
         }
     }
 
