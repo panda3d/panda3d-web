@@ -35,7 +35,7 @@ $plan-divider-color: $medium-gray;
 
     .fa {
         color: $primary;
-        font-size: 4rem;
+        @include font-size(4);
         margin: 0 auto;
 
         @include breakpoint(medium) {

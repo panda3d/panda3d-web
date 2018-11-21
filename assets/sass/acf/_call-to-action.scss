@@ -40,7 +40,7 @@
     }
 
     p.subheader {
-        font-size: 1.25rem;
+        @include font-size(1.25);
         font-weight: 300;
     }
 }

@@ -28,7 +28,7 @@
     }
 
     p.subheader {
-        font-size: 1.25rem;
+        @include font-size(1.25);
         font-weight: 300;
     }
 }
@@ -37,7 +37,7 @@
     margin-top: 3rem;
 
     .cta {
-        font-size: 1.6rem;
+        @include font-size(1.6);
 
         @include breakpoint(small only) {
             display: block;
