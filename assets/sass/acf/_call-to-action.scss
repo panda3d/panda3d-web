@@ -10,29 +10,29 @@
 
 .call-to-action__container {
     display: grid;
+    grid-template-areas: 'icon'
+                         'text';
     max-width: 75rem;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 4rem 1rem;
     text-align: center;
 
     @include breakpoint(large) {
         align-items: center;
+        grid-template-areas: 'text icon';
         grid-template-columns: 3fr 1fr;
-        padding: 3rem 0;
+        padding: 3rem 1rem;
         text-align: left;
     }
 }
 
 .call-to-action__text {
     color: #fff;
-    margin-bottom: 1rem;
-
-    @include breakpoint(medium) {
-        margin-bottom: 2rem;
-    }
+    grid-area: text;
+    margin-top: 3rem;
 
     @include breakpoint(large) {
-        margin-bottom: 0;
+        margin-top: 0;
     }
 
     h1 {
@@ -84,5 +84,9 @@
 
 .call-to-action__icon {
     color: #fff;
-    text-align: right;
+    grid-area: icon;
+
+    @include breakpoint(large) {
+        text-align: right;
+    }
 }
