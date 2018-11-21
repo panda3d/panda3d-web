@@ -3,12 +3,12 @@
         max-width: 1600px;
         display: grid;
         grid-template-areas:
-            "info"
-            "logos";
+            'info'
+            'logos';
         grid-template-columns: 1fr;
 
         @include breakpoint(large) {
-            grid-template-areas: "logos info";
+            grid-template-areas: 'logos info';
             grid-template-columns: 1fr 1fr;
         }
     }
@@ -51,7 +51,13 @@
 .brand-showcase__info {
     align-self: center;
     grid-area: info;
-    padding: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+
+    @include breakpoint(large) {
+        padding: 2rem;
+        text-align: left;
+    }
 
     h1 {
         margin-top: 0;
