@@ -158,9 +158,6 @@ gulp.task("styles", function() {
             sass({
                 errLogToConsole: true,
                 outputStyle: "compact",
-                // outputStyle: 'compressed',
-                // outputStyle: 'nested',
-                // outputStyle: 'expanded',
                 precision: 10
             })
         )
@@ -169,16 +166,7 @@ gulp.task("styles", function() {
         .pipe(sourcemaps.init({ loadMaps: true }))
         .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
 
-        .pipe(sourcemaps.write("./"))
-        .pipe(lineec()) // Consistent Line Endings for non UNIX systems.
-        .pipe(gulp.dest(styleDestination))
-
-        .pipe(filter("**/*.css")) // Filtering stream to only css files
-        .pipe(mmq({ log: true })) // Merge Media Queries only for .min.css version.
-
-        .pipe(browserSync.stream()) // Reloads style.css if that is enqueued.
-
-        .pipe(rename({ suffix: ".min" }))
+        .pipe(mmq({ log: true })) // Merge Media Queries
         .pipe(
             minifycss({
                 maxLineLen: 10
