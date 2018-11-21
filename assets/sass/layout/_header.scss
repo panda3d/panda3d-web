@@ -27,4 +27,15 @@
             width: auto;
         }
     }
+
+    button {
+        border: none;
+        color: white;
+        cursor: pointer;
+        @include font-size(1.5);
+        height: 100%;
+        outline: none;
+        padding: 0 1rem;
+        @include transition-color-slide(transparent, darken($color__background-header, 5%));
+    }
 }
