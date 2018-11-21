@@ -1,0 +1,15 @@
+.page-template-flexible-content-page {
+	section {
+		margin: $size__component-padding;
+	}
+}
+
+.hero + .call-to-action {
+    margin-top: 0;
+}
+
+section:last-child {
+    &.call-to-action, &.choices {
+        margin-bottom: 0;
+    }
+}
