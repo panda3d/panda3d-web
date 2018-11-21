@@ -5,8 +5,18 @@
 }
 
 .blog-section-header {
-    display: flex;
-    justify-content: space-between;
+    text-align: center;
+
+    @include breakpoint(small, only) {
+        .blog-posts__more {
+            display: none;
+        }
+    }
+
+    @include breakpoint(medium) {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .article__container {
