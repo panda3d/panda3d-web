@@ -16,6 +16,6 @@ function panda3d_scripts() {
 	}
 
 	// Fonts
-	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Roboto:100,400,700', array(), '20180518', true );
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Roboto:400,400i,700,700i', false );
 }
 add_action( 'wp_enqueue_scripts', 'panda3d_scripts' );
