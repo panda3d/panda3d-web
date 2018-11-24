@@ -1,7 +1,7 @@
 <div class="curvable features">
   <div class="features__outer">
 
-    <h1><?php the_sub_field('header') ?></h1>
+    <h2><?php the_sub_field('header') ?></h2>
     <p><?php the_sub_field('subheader') ?></p>
 
     <div class="features__inner">

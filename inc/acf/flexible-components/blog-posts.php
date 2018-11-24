@@ -14,7 +14,7 @@
     <div class="wrap">
 
         <div class="blog-section-header">
-            <h1><?php the_sub_field('header'); ?></h1>
+            <h2><?php the_sub_field('header'); ?></h2>
 
             <div class="blog-posts__more">
                 <?php if ($news_category === '') { ?>

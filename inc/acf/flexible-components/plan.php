@@ -1,7 +1,7 @@
 <section class="plan">
     <div class="plan__outer">
 
-        <h1><?php the_sub_field('header') ?></h1>
+        <h2><?php the_sub_field('header') ?></h2>
         <p><?php the_sub_field('subheader') ?></p>
 
         <div class="plan__inner">

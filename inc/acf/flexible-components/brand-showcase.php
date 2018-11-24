@@ -10,7 +10,7 @@
         </div>
 
         <div class="brand-showcase__info">
-            <h1><?php the_sub_field('header') ?></h1>
+            <h2><?php the_sub_field('header') ?></h2>
             <div><?php the_sub_field('description') ?></div>
 
             <a class="cta cta--secondary" href="#"><i class="fas fa-gamepad"></i> View Showcase</a>

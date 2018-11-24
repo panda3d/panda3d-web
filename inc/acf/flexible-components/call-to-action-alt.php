@@ -2,7 +2,7 @@
     <div class="call-to-action-alt__container">
 
         <div class="call-to-action-alt__text">
-            <h1><?php the_sub_field('header'); ?></h1>
+            <h2><?php the_sub_field('header'); ?></h2>
             <p class="subheader"><?php the_sub_field('description'); ?></p>
         </div>
 
