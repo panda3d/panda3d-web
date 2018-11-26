@@ -11,7 +11,7 @@
 
         <div class="brand-showcase__info">
             <h2><?php the_sub_field('header') ?></h2>
-            <div><?php the_sub_field('description') ?></div>
+            <p class="subheader"><?php the_sub_field('description') ?></p>
 
             <a class="cta cta--secondary" href="#"><i class="fas fa-gamepad"></i> View Showcase</a>
         </div>
