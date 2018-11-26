@@ -29,11 +29,6 @@
     h1 {
         margin: 0;
     }
-
-    p.subheader {
-        @include font-size(1.25);
-        font-weight: 300;
-    }
 }
 
 .call-to-action-alt__buttons {

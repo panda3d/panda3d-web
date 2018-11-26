@@ -16,6 +16,11 @@ h1, h2 {
 
 p {
 	margin-bottom: 1.5em;
+
+	&.subheader {
+		@include font-size(1.25);
+		font-weight: 300;
+	}
 }
 
 dfn, cite, em, i {
