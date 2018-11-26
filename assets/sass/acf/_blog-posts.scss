@@ -23,12 +23,8 @@
     display: grid;
     grid-gap: 1.5rem;
 
-    @include breakpoint(medium) {
-        grid-template-columns: 1fr 1fr;
-    }
-
     @include breakpoint(large) {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
