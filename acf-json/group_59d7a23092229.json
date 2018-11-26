@@ -71,8 +71,8 @@
                 },
                 "59d7c15fae146": {
                     "key": "59d7c15fae146",
-                    "name": "features",
-                    "label": "Features",
+                    "name": "feature-images",
+                    "label": "Feature Images",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -115,8 +115,8 @@
                         },
                         {
                             "key": "field_59d7c18cae147",
-                            "label": "Features",
-                            "name": "features",
+                            "label": "Feature Images",
+                            "name": "feature_images",
                             "type": "repeater",
                             "instructions": "",
                             "required": 1,
@@ -127,10 +127,10 @@
                                 "id": ""
                             },
                             "collapsed": "",
-                            "min": 3,
+                            "min": 2,
                             "max": 8,
                             "layout": "table",
-                            "button_label": "",
+                            "button_label": "Add Feature",
                             "sub_fields": [
                                 {
                                     "key": "field_59d7c211ae149",
@@ -171,11 +171,11 @@
                                     "maxlength": ""
                                 },
                                 {
-                                    "key": "field_59d7c207ae148",
-                                    "label": "Icon",
-                                    "name": "icon",
-                                    "type": "text",
-                                    "instructions": "Enter an icon name from http:\/\/fontawesome.io\/icons\/. Example: \"fas-flag\"",
+                                    "key": "field_5bf8f060984bc",
+                                    "label": "Image",
+                                    "name": "image",
+                                    "type": "image",
+                                    "instructions": "",
                                     "required": 1,
                                     "conditional_logic": 0,
                                     "wrapper": {
@@ -183,11 +183,16 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "default_value": "fas-flag",
-                                    "placeholder": "fas-flag",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
+                                    "return_format": "url",
+                                    "preview_size": "thumbnail",
+                                    "library": "all",
+                                    "min_width": 300,
+                                    "min_height": 300,
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": ""
                                 }
                             ]
                         }
@@ -1353,5 +1358,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1542238933
+    "modified": 1543266976
 }

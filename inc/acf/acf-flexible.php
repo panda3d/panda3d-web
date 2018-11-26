@@ -10,8 +10,8 @@ function panda3d_display_flexible_content() {
 		// Check which component we're trying to view
 		if ( get_row_layout() == 'hero' ) {
 			include 'flexible-components/hero.php';
-		} elseif ( get_row_layout() == 'features' ) {
-			include 'flexible-components/features.php';
+		} elseif ( get_row_layout() == 'feature-images' ) {
+			include 'flexible-components/feature-images.php';
 		} elseif ( get_row_layout() == 'call_to_action' ) {
 			include 'flexible-components/call-to-action.php';
 		} elseif ( get_row_layout() == 'plan' ) {
