@@ -1,19 +1,19 @@
 section.hero {
-    margin: 0;
-    padding: 0;
-}
-
-.hero__wrap {
-    align-items: center;
-    background-size: cover;
     display: flex;
     height: 60vh;
+    margin: 0;
     max-height: 50rem;
     min-height: 30rem;
+    padding: 0;
 
     @include breakpoint(large) {
         height: 75vh;
     }
+}
+
+.hero__wrap {
+    align-self: center;
+    width: 100%;
 }
 
 .hero__content {
@@ -22,9 +22,6 @@ section.hero {
     text-align: center;
 
     h1 {
-        background: rgba(#000, 0.5);
-        border-radius: 4px;
-        color: #fff;
         @include font-size(1.5);
         font-weight: 100;
         padding: 0.5rem;

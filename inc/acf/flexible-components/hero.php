@@ -1,8 +1,9 @@
 <section class="hero">
-    <div class="hero__wrap" style="background-image: url(<?php the_sub_field( 'background_image' ) ?>);">
+    <div class="background-image" style="background-image: url(<?php the_sub_field( 'background_image' ) ?>);"></div>
+    <div class="hero__wrap">
         <div class="hero__content">
 
-            <h1><?php the_sub_field('header') ?></h1>
+            <h1 class="text-box"><?php the_sub_field('header') ?></h1>
 
             <div class="hero__calltoaction">
                 <?php if(get_field('primary_call_to_action', 'option')) { ?>
