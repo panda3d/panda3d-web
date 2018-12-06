@@ -1,9 +1,12 @@
 <section class="call-to-action-alt">
+    <div class="background-image" style="background-image: url(<?php the_sub_field( 'background_image' ) ?>);"></div>
     <div class="call-to-action-alt__container">
 
         <div class="call-to-action-alt__text">
-            <h2><?php the_sub_field('header'); ?></h2>
-            <p class="subheader"><?php the_sub_field('description'); ?></p>
+            <div class="text-box">
+                <h2><?php the_sub_field('header'); ?></h2>
+                <p class="subheader"><?php the_sub_field('description'); ?></p>
+            </div>
         </div>
 
         <div class="call-to-action-alt__buttons">

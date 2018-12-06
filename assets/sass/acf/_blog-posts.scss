@@ -1,4 +1,6 @@
-.blog-posts {
+section.blog-posts {
+    overflow: unset;
+
     .wrap {
         max-width: 1700px;
     }

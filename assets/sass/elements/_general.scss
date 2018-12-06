@@ -33,3 +33,22 @@ iframe,
 object {
 	max-width: 100%;
 }
+
+.background-image {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	filter: blur($background__blur-strength);
+	height: 100%;
+	position: absolute;
+	transform: scale(1.1);
+	width: 100%;
+	z-index: -1;
+}
+
+.text-box {
+	background-color: rgba(black, 0.5);
+	border-radius: 4px;
+	color: white;
+	padding: 0.5rem 2rem;
+}

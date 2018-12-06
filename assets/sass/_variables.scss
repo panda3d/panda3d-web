@@ -4,7 +4,7 @@
 
 // Theme color pallette
 $color__theme-purple: #735CDD;
-$color__theme-red: #dd5c5c;
+$color__theme-red: #DD5C5C;
 $color__theme-blue: #5CA7DD;
 $color__light: #ccc;
 $color__mid: #555;
@@ -38,22 +38,23 @@ $color__border-abbr: #777;
 /**
  * Typography
  */
- $font__main: 'Roboto', sans-serif;
- $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
- $font__pre: "Courier 10 Pitch", Courier, monospace;
- $font__line-height-body: 1.5;
- $font__line-height-pre: 1.6;
+$font__main: 'Roboto', sans-serif;
+$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", Courier, monospace;
+$font__line-height-body: 1.5;
+$font__line-height-pre: 1.6;
+$background__blur-strength: 3px;
 
 
 /**
  * Layout
  */
- $size__site-main: 100%;
- $size__site-sidebar: 25%;
- $size__header-height: 55px;
- $size__component-padding: 8rem 0;
+$size__site-main: 100%;
+$size__site-sidebar: 25%;
+$size__header-height: 55px;
+$size__component-padding: 8rem 0;
 
- $columns: (
+$columns: (
 	1: 100%,
 	2: 50%,
 	3: 33.33%,
@@ -90,6 +91,7 @@ $breakpoints: (
  */
 $anim__duration-hover: 0.25s;
 $anim__function-easein: cubic-bezier(0.4, 0, 0.2, 1);
+
 
 /**
  * Buttons

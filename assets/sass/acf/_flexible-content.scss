@@ -1,17 +1,27 @@
 .page-template-flexible-content-page {
 	section {
         margin: $size__component-padding;
+        overflow: hidden;
         padding-left: 1rem;
         padding-right: 1rem;
+        position: relative;
 	}
 }
 
-.hero + .call-to-action {
-    margin-top: 0;
+.hero {
+    + .call-to-action, + .call-to-action-alt, + .choices {
+        margin-top: 0;
+    }
+}
+
+.call-to-action, .call-to-action-alt, .choices {
+    &:nth-last-child(2) {
+        margin-bottom: 0;
+    }
 }
 
 section:last-child {
-    &.call-to-action, &.choices {
-        margin-bottom: 0;
+    &.call-to-action, &.call-to-action-alt, &.choices {
+        margin: 0;
     }
 }

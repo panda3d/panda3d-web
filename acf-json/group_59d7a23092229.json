@@ -690,7 +690,7 @@
                 "layout_5becb26ac201c": {
                     "key": "layout_5becb26ac201c",
                     "name": "call_to_action_alt",
-                    "label": "Call to Action (No Background)",
+                    "label": "Call to Action (Image Background)",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -730,6 +730,30 @@
                             "maxlength": "",
                             "rows": "",
                             "new_lines": ""
+                        },
+                        {
+                            "key": "field_5c084f193d44b",
+                            "label": "Background Image",
+                            "name": "background_image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
                         },
                         {
                             "key": "field_5becb26ac2020",
@@ -1358,5 +1382,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1543266976
+    "modified": 1544048433
 }
