@@ -7,21 +7,3 @@
         position: relative;
 	}
 }
-
-.hero {
-    + .call-to-action, + .call-to-action-alt, + .choices {
-        margin-top: 0;
-    }
-}
-
-.call-to-action, .call-to-action-alt, .choices {
-    &:nth-last-child(2) {
-        margin-bottom: 0;
-    }
-}
-
-section:last-child {
-    &.call-to-action, &.call-to-action-alt, &.choices {
-        margin: 0;
-    }
-}
