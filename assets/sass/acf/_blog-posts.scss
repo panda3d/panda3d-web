@@ -5,6 +5,10 @@ section.blog-posts {
 .blog-section-header {
     text-align: center;
 
+    h2 {
+        margin-top: 0;
+    }
+
     @include breakpoint(small, only) {
         .blog-posts__more {
             display: none;
@@ -79,7 +83,6 @@ section.blog-posts {
 }
 
 .blog-posts__more {
-    margin-top: 1.5rem;
     text-align: center;
 
     @include breakpoint(medium) {

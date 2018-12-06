@@ -14,7 +14,7 @@
     text-align: center;
 
     @include breakpoint(large) {
-        height: 65vh;
+        height: $size__hero-height;
     }
 }
 

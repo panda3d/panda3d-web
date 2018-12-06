@@ -7,7 +7,7 @@ section.hero {
     padding: 0;
 
     @include breakpoint(large) {
-        height: 80vh;
+        height: $size__hero-height;
     }
 }
 

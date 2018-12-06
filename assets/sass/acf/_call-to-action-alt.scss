@@ -3,17 +3,19 @@
     margin: 0 !important;
 }
 
-.call-to-action-alt__container {
+.call-to-action-alt__wrap {
+    align-items: center;
     display: grid;
     grid-template-columns: 1fr;
     max-width: 70rem;
     margin: 0 auto;
-    padding: $size__component-padding;
+    height: 60vh;
     text-align: center;
 
     @include breakpoint(large) {
         grid-gap: 4rem;
         grid-template-columns: 3fr 1fr;
+        height: $size__hero-height;
     }
 }
 
