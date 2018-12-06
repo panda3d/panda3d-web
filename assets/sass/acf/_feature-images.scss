@@ -5,8 +5,8 @@
     flex-direction: column;
     text-align: center;
 
-    h1, p {
-        margin: 0;
+    h2, p {
+        margin-top: 0;
     }
 
 }
@@ -16,7 +16,7 @@
     text-align: center;
     grid-gap: 2rem;
     grid-template-columns: 1fr;
-    margin-top: 4rem;
+    margin-top: 2rem;
 
     @include breakpoint(large) {
         grid-template-columns: 1fr 1fr;
