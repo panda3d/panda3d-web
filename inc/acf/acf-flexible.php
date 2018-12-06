@@ -14,8 +14,6 @@ function panda3d_display_flexible_content() {
 			include 'flexible-components/feature-images.php';
 		} elseif ( get_row_layout() == 'call_to_action' ) {
 			include 'flexible-components/call-to-action.php';
-		} elseif ( get_row_layout() == 'plan' ) {
-			include 'flexible-components/plan.php';
 		} elseif ( get_row_layout() == 'blog_posts' ) {
 			include 'flexible-components/blog-posts.php';
 		} elseif ( get_row_layout() == 'brand_showcase' ) {
@@ -24,6 +22,8 @@ function panda3d_display_flexible_content() {
 			include 'flexible-components/choices.php';
 		} elseif ( get_row_layout() == 'call_to_action_alt' ) {
 			include 'flexible-components/call-to-action-alt.php';
+		} elseif ( get_row_layout() == 'info_block' ) {
+			include 'flexible-components/info-block.php';
 		}
 	endwhile;
 }
