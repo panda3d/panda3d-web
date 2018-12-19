@@ -44,7 +44,7 @@
         </div>
 
         <div class="call-to-action__icon">
-            <i class="far fa-<?php the_sub_field('icon'); ?> fa-10x"></i>
+            <i class="far fa-<?php the_sub_field('icon'); ?>"></i>
         </div>
 
     </div>

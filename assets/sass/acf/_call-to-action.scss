@@ -15,7 +15,7 @@
                          'text';
     max-width: 75rem;
     margin: 0 auto;
-    padding: 4rem 1rem;
+    padding: 3rem 1rem;
     text-align: center;
 
     @include breakpoint(large) {
@@ -30,13 +30,8 @@
 .call-to-action__text {
     color: #fff;
     grid-area: text;
-    margin-top: 3rem;
 
-    @include breakpoint(large) {
-        margin-top: 0;
-    }
-
-    h1 {
+    h2 {
         margin: 0;
     }
 }
@@ -79,10 +74,13 @@
 }
 
 .call-to-action__icon {
-    color: #fff;
-    grid-area: icon;
+    display: none;
 
     @include breakpoint(large) {
+        color: #fff;
+        display: block;
+        @include font-size(10);
+        grid-area: icon;
         text-align: right;
     }
 }
