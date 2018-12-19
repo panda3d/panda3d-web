@@ -55,6 +55,7 @@ $size__header-height: 55px;
 $size__component-padding: 4rem 0;
 $size__component-padding-large: 8rem 0;
 $size__hero-height: calc(100vh - #{$size__header-height * 2});
+$size__off-canvas: 400px;
 
 $columns: (
 	1: 100%,
@@ -91,9 +92,9 @@ $breakpoints: (
 /**
  * Animation
  */
-$anim__duration-hover: 0.25s;
+$anim__hover-duration: 0.25s;
 $anim__function-easein: cubic-bezier(0.4, 0, 0.2, 1);
-
+$anim__off-canvas-duration: 0.5s;
 
 /**
  * Buttons

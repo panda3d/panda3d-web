@@ -36,8 +36,8 @@ section.blog-posts {
     border-radius: 4px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: transform $anim__duration-hover $anim__function-easein,
-                border-color $anim__duration-hover $anim__function-easein;
+    transition: transform $anim__hover-duration $anim__function-easein,
+                border-color $anim__hover-duration $anim__function-easein;
 
     &:hover,
     &:active,

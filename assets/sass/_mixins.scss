@@ -42,7 +42,7 @@
  * Color Slide Transition
  * Slides a color up from the bottom of the element on hover, with a background color fade fallback.
  */
- @mixin transition-color-slide($start-color, $end-color, $duration: $anim__duration-hover) {
+ @mixin transition-color-slide($start-color, $end-color, $duration: $anim__hover-duration) {
 	@include background-duotone($start-color, $end-color);
 	background-size: 100% 200%;
 	transition: all $duration $anim__function-easein;

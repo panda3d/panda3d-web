@@ -21,25 +21,40 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'panda3d' ); ?></a>
 
-	<header id="header" class="site-header">
-		<div class="header-container">
-			<div class="site-branding">
-				<?php the_custom_logo(); ?>
-			</div><!-- .site-branding -->
+	<!-- Off Canvas Navigation -->
+	<nav id="off-canvas-menu">
+		<?php
+			wp_nav_menu(array(
+				'theme_location' => 'primary-menu',
+				'menu_id'        => 'primary-menu',
+			));
+		?>
+	</nav>
 
-			<nav id="site-navigation" class="main-navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i title="<?php esc_html_e( 'Menu', 'panda3d' ); ?>" class="fas fa-bars"></i></button>
-				<?php
-				wp_nav_menu( array(
-					'theme_location' => 'primary-menu',
-					'menu_id'        => 'primary-menu',
-				) );
-				?>
-			</nav><!-- #site-navigation -->
-		</div>
-	</header><!-- #header -->
+	<div id="off-canvas-overlay"></div>
 
-	<div id="content" class="site-content">
+	<div id="page" class="site">
+		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'panda3d' ); ?></a>
+
+		<header id="header" class="site-header">
+			<div class="header-container">
+				<div class="site-branding">
+					<?php the_custom_logo(); ?>
+				</div>
+
+				<!-- Desktop Navigation -->
+				<nav id="site-navigation" class="main-navigation">
+					<?php
+						wp_nav_menu(array(
+							'theme_location' => 'primary-menu',
+							'menu_id'        => 'primary-menu',
+						));
+					?>
+					<button id="off-canvas-toggle"><i title="Menu" class="fas fa-bars"></i></button>
+				</nav>
+
+			</div>
+		</header>
+
+		<div id="content" class="site-content">
