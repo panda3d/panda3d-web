@@ -8,13 +8,15 @@
     display: grid;
     grid-template-areas: 'text-box';
     grid-template-columns: 1fr;
+    height: auto;
     max-width: 90rem;
     margin: 0 auto;
-    height: 50vh;
+    padding: 4rem 0;
     text-align: center;
 
     @include breakpoint(large) {
         height: $size__hero-height;
+        padding: 0;
     }
 }
 
@@ -38,10 +40,10 @@
 
 .info-block__text {
     grid-area: text-box;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
 
     @include breakpoint(large) {
-        margin-bottom: 0;
+        margin: 0;
     }
 
     h1 {

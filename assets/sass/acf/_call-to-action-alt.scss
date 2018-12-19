@@ -7,15 +7,17 @@
     align-items: center;
     display: grid;
     grid-template-columns: 1fr;
+    height: auto;
     max-width: 70rem;
     margin: 0 auto;
-    height: 60vh;
+    padding: 4rem 0;
     text-align: center;
 
     @include breakpoint(large) {
         grid-gap: 4rem;
         grid-template-columns: 3fr 1fr;
         height: $size__hero-height;
+        padding: 0;
     }
 }
 

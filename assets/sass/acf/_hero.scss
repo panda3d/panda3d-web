@@ -1,10 +1,7 @@
 section.hero {
     display: flex;
-    height: 60vh;
+    height: auto;
     margin: 0 !important;
-    max-height: 50rem;
-    min-height: 30rem;
-    padding: 0;
 
     @include breakpoint(large) {
         height: $size__hero-height;
@@ -13,7 +10,12 @@ section.hero {
 
 .hero__wrap {
     align-self: center;
+    padding: 4rem 0;
     width: 100%;
+
+    @include breakpoint(large) {
+        padding: 0;
+    }
 }
 
 .hero__content {
