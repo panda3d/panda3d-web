@@ -5,7 +5,7 @@
 function panda3d_scripts() {
 	// Vendor
 	wp_enqueue_script('fontawesome', get_template_directory_uri() . '/assets/js/vendor/fontawesome/all.min.js', array(), '5.6.1', true);
-	wp_enqueue_script('offside-js', get_template_directory_uri() . '/assets/js/vendor/offside/offside.js', array(), '1.4.0', true);
+	wp_enqueue_script('offside-js', get_template_directory_uri() . '/assets/js/vendor/offside/offside.min.js', array(), '1.4.0', true);
 
 	// Theme
 	wp_enqueue_style('panda3d-style', get_stylesheet_uri());
