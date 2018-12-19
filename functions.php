@@ -20,7 +20,6 @@ require get_template_directory() . '/inc/theme/widget-areas.php';    // Add widg
 require get_template_directory() . '/inc/core/custom-header.php';      // Implement the Custom Header feature
 require get_template_directory() . '/inc/core/template-tags.php';      // Add custom template tags
 require get_template_directory() . '/inc/core/template-functions.php'; // Functions which enhance the theme by hooking into WordPress
-require get_template_directory() . '/inc/core/customizer.php';         // Customizer additions
 
 /**
  * Advanced Custom Fields Functions
