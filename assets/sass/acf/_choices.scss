@@ -34,21 +34,27 @@
 }
 
 .choices__buttons {
-    margin-top: 3rem;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr;
+    margin: 3rem auto 0;
+    max-width: 90%;
+
+    @include breakpoint(medium) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @include breakpoint(large) {
+        max-width: 75%;
+    }
 
     a {
         @include font-size(1.25);
-        margin-bottom: 2rem;
         padding: 1.5rem;
         width: 100%;
 
         @include breakpoint(medium) {
-            width: 20%;
             margin-bottom: 0;
-
-            &:not(:first-of-type) {
-                margin-left: 3rem;
-            }
         }
 
         svg {
