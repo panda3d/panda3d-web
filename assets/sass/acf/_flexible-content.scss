@@ -1,9 +1,13 @@
 .page-template-flexible-content-page {
-	section {
+    section {
         margin: $size__component-padding;
         overflow: hidden;
         padding-left: 1rem;
         padding-right: 1rem;
         position: relative;
-	}
+
+        @include breakpoint(large) {
+            margin: $size__component-padding-large;
+        }
+    }
 }

@@ -24,7 +24,7 @@ section.hero {
     text-align: center;
 
     h1 {
-        @include font-size(1.5);
+        @include font-size(2.25);
         font-weight: 100;
         padding: 0.5rem;
         text-transform: uppercase;
@@ -35,15 +35,6 @@ section.hero {
 
         @include breakpoint(large) {
             @include font-size(4);
-        }
-    }
-
-    .subheader {
-        color: #ccc;
-        @include font-size(1.25);
-
-        @include breakpoint(medium) {
-            @include font-size(1.6);
         }
     }
 }
