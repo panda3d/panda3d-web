@@ -1,6 +1,10 @@
 #header {
     background: $color__background-header;
-    height: $size__header-height;
+	height: $size__header-height;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1;
 
     .header-container {
         height: 100%;
