@@ -4,7 +4,7 @@
  */
 
 #off-canvas-overlay {
-    background-color: $color__dark;
+    background-color: black;
     bottom: 0;
     cursor: pointer;
     left: 0;
@@ -32,10 +32,41 @@
 
 #off-canvas-menu {
     display: none; // Make sure menu doesn't render while JS loads
-    background: $color__background-header;
+    background-color: $color__background-header;
     border-left: 5px solid;
     border-color: $color__theme-purple;
     border-image: linear-gradient(darken($color__theme-purple, 5%), lighten($color__theme-purple, 20%)) 30;
+    @include font-size(1.25);
+    padding-top: 1rem;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        color: white;
+        display: block;
+        padding: 1rem 1.5rem;
+        text-decoration: none;
+    }
+
+    li:not(.cta) {
+        a {
+            &:hover, &:active, &:focus {
+                background-color: lighten($color__background-header, 5%);
+                outline: none;
+            }
+        }
+    }
+
+    .cta {
+        border-radius: 0;
+        display: block;
+        padding: 0;
+        font-size: inherit;
+    }
 }
 
 

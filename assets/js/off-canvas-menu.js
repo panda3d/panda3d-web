@@ -3,7 +3,9 @@
  */
 var offCanvasMenu = offside('#off-canvas-menu', {
     buttonsSelector: '#off-canvas-toggle',
-    slidingElementsSelector:'#page',
+    // When enabled, off canvas menu pushes the page to the side
+    // instead of overlaying on top of the page.
+    // slidingElementsSelector:'#page',
     slidingSide: 'right',
 });
 
