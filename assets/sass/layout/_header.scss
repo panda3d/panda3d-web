@@ -27,15 +27,117 @@
             width: auto;
         }
     }
+}
 
-    button {
-        border: none;
-        color: white;
-        cursor: pointer;
-        @include font-size(1.5);
-        height: 100%;
-        outline: none;
-        padding: 0 1rem;
-        @include transition-color-slide(transparent, darken($color__background-header, 5%));
+.primary-navigation {
+	float: right;
+	height: 100%;
+
+	> div {
+		float: right;
+		height: 100%;
+	}
+
+	ul {
+		display: none;
+		height: 100%;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+        @include breakpoint(large) {
+            display: block;
+        }
+
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			float: left;
+			position: absolute;
+			top: 100%;
+			left: -999em;
+			z-index: 99999;
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+				&:hover > ul,
+				&.focus > ul {
+					left: 100%;
+				}
+			}
+
+			a {
+				width: 200px;
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+
+	li {
+		float: left;
+		height: 100%;
+		position: relative;
+	}
+
+	a {
+		color: #fff;
+		display: block;
+		height: 100%;
+		line-height: $size__header-height;
+		@include font-size(1.1);
+		font-weight: 100;
+		padding: 0 1rem;
+		text-decoration: none;
+
+		&:hover, &:active, &:focus {
+			border-bottom: 3px solid #fff;
+			outline: 0;
+		}
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+		font-weight: bold;
+	}
+
+	.cta--primary {
+		border: 0;
+		border-radius: 0;
+		margin-left: 1rem;
+		padding: 0 0.5rem;
+
+		a {
+			font-weight: 400;
+
+			&:hover, &:active, &:focus {
+				background-color: transparent;
+				border: 0;
+				color: #fff;
+			}
+		}
+	}
+}
+
+#off-canvas-toggle {
+    border: none;
+    color: white;
+    cursor: pointer;
+    @include font-size(1.5);
+    height: 100%;
+    outline: none;
+    padding: 0 1rem;
+    @include transition-color-slide(transparent, darken($color__background-header, 5%));
+
+    @include breakpoint(large) {
+        display: none;
     }
 }

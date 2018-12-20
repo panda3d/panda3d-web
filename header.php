@@ -44,7 +44,7 @@
 				</div>
 
 				<!-- Desktop Navigation -->
-				<nav id="site-navigation" class="main-navigation">
+				<nav class="primary-navigation">
 					<?php
 						wp_nav_menu(array(
 							'theme_location' => 'primary-menu',
