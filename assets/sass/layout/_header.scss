@@ -1,3 +1,8 @@
+.admin-bar #header {
+    // Bump down the header when the admin bar is active
+    margin-top: 32px;
+}
+
 #header {
     background: $color__background-header;
 	height: $size__header-height;
