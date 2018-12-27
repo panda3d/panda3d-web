@@ -1,10 +1,10 @@
 === Panda3D ===
 
-Contributors: automattic
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Contributors: JoeyZio, automattic
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments
 
 Requires at least: 4.5
-Tested up to: 4.8
+Tested up to: 5.0
 Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -24,8 +24,6 @@ Custom theme created for Panda3D.
 == Frequently Asked Questions ==
 
 = Does this theme support any plugins? =
-
-Panda3D includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
