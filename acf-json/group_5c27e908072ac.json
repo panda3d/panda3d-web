@@ -1,31 +1,63 @@
 {
     "key": "group_5c27e908072ac",
-    "title": "SDK Downloads",
+    "title": "SDK Download - Attributes",
     "fields": [
         {
-            "key": "field_5c27e952cf1f9",
-            "label": "Panda3D SDK Versions",
-            "name": "panda3d_sdk_versions",
-            "type": "repeater",
+            "key": "field_5c27e9a8cf1fb",
+            "label": "Release Date",
+            "name": "release_date",
+            "type": "date_time_picker",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "collapsed": "field_5c27e98ecf1fa",
-            "min": 0,
-            "max": 0,
-            "layout": "row",
-            "button_label": "Add SDK Version",
+            "display_format": "m\/d\/Y g:i a",
+            "return_format": "Y-m-d H:i:s",
+            "first_day": 0
+        },
+        {
+            "key": "field_5c2a7e25bbfc9",
+            "label": "Release Notes",
+            "name": "release_notes",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_5c27e9f6cf1fc",
+            "label": "Downloads",
+            "name": "downloads",
+            "type": "group",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_5c27e98ecf1fa",
-                    "label": "Version Number",
-                    "name": "version_number",
-                    "type": "text",
+                    "key": "field_5c27eab3a5bee",
+                    "label": "Microsoft Windows",
+                    "name": "microsoft_windows",
+                    "type": "repeater",
                     "instructions": "",
                     "required": 1,
                     "conditional_logic": 0,
@@ -34,49 +66,17 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "placeholder": "1.10.0",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_5c27e9a8cf1fb",
-                    "label": "Release Date",
-                    "name": "release_date",
-                    "type": "date_time_picker",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "display_format": "m\/d\/Y g:i a",
-                    "return_format": "Y-m-d H:i:s",
-                    "first_day": 0
-                },
-                {
-                    "key": "field_5c27e9f6cf1fc",
-                    "label": "Downloads",
-                    "name": "downloads",
-                    "type": "group",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
+                    "collapsed": "field_5c27eacca5bef",
+                    "min": 1,
+                    "max": 0,
                     "layout": "block",
+                    "button_label": "Add OS Version",
                     "sub_fields": [
                         {
-                            "key": "field_5c27eab3a5bee",
-                            "label": "Microsoft Windows",
-                            "name": "microsoft_windows",
-                            "type": "repeater",
+                            "key": "field_5c27eacca5bef",
+                            "label": "OS Version",
+                            "name": "os_version",
+                            "type": "text",
                             "instructions": "",
                             "required": 1,
                             "conditional_logic": 0,
@@ -85,54 +85,17 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "collapsed": "field_5c27eacca5bef",
-                            "min": 1,
-                            "max": 0,
-                            "layout": "block",
-                            "button_label": "Add OS Version",
-                            "sub_fields": [
-                                {
-                                    "key": "field_5c27eacca5bef",
-                                    "label": "OS Version",
-                                    "name": "os_version",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 1,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
-                                },
-                                {
-                                    "key": "field_5c27eadca5bf0",
-                                    "label": "Download URL",
-                                    "name": "download_url",
-                                    "type": "url",
-                                    "instructions": "",
-                                    "required": 1,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": ""
-                                }
-                            ]
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
                         },
                         {
-                            "key": "field_5c27eb1fa5bf1",
-                            "label": "macOS",
-                            "name": "macos",
-                            "type": "repeater",
+                            "key": "field_5c27eadca5bf0",
+                            "label": "Download URL",
+                            "name": "download_url",
+                            "type": "url",
                             "instructions": "",
                             "required": 1,
                             "conditional_logic": 0,
@@ -141,54 +104,54 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "collapsed": "",
-                            "min": 1,
-                            "max": 0,
-                            "layout": "block",
-                            "button_label": "Add OS Version",
-                            "sub_fields": [
-                                {
-                                    "key": "field_5c27eb1fa5bf2",
-                                    "label": "OS Version",
-                                    "name": "os_version",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 1,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
-                                },
-                                {
-                                    "key": "field_5c27eb1fa5bf3",
-                                    "label": "Download URL",
-                                    "name": "download_url",
-                                    "type": "url",
-                                    "instructions": "",
-                                    "required": 1,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": ""
-                                }
-                            ]
+                            "default_value": "",
+                            "placeholder": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_5c27eb1fa5bf1",
+                    "label": "macOS",
+                    "name": "macos",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 1,
+                    "max": 0,
+                    "layout": "block",
+                    "button_label": "Add OS Version",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c27eb1fa5bf2",
+                            "label": "OS Version",
+                            "name": "os_version",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
                         },
                         {
-                            "key": "field_5c27eb30a5bf4",
-                            "label": "Ubuntu",
-                            "name": "ubuntu",
-                            "type": "repeater",
+                            "key": "field_5c27eb1fa5bf3",
+                            "label": "Download URL",
+                            "name": "download_url",
+                            "type": "url",
                             "instructions": "",
                             "required": 1,
                             "conditional_logic": 0,
@@ -197,54 +160,54 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "collapsed": "",
-                            "min": 1,
-                            "max": 0,
-                            "layout": "block",
-                            "button_label": "Add OS Version",
-                            "sub_fields": [
-                                {
-                                    "key": "field_5c27eb30a5bf5",
-                                    "label": "OS Version",
-                                    "name": "os_version",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 1,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
-                                },
-                                {
-                                    "key": "field_5c27eb30a5bf6",
-                                    "label": "Download URL",
-                                    "name": "download_url",
-                                    "type": "url",
-                                    "instructions": "",
-                                    "required": 1,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": ""
-                                }
-                            ]
+                            "default_value": "",
+                            "placeholder": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_5c27eb30a5bf4",
+                    "label": "Ubuntu",
+                    "name": "ubuntu",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 1,
+                    "max": 0,
+                    "layout": "block",
+                    "button_label": "Add OS Version",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c27eb30a5bf5",
+                            "label": "OS Version",
+                            "name": "os_version",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
                         },
                         {
-                            "key": "field_5c27eb58a5bf7",
-                            "label": "Debian",
-                            "name": "debian",
-                            "type": "repeater",
+                            "key": "field_5c27eb30a5bf6",
+                            "label": "Download URL",
+                            "name": "download_url",
+                            "type": "url",
                             "instructions": "",
                             "required": 1,
                             "conditional_logic": 0,
@@ -253,54 +216,54 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "collapsed": "",
-                            "min": 1,
-                            "max": 0,
-                            "layout": "block",
-                            "button_label": "Add OS Version",
-                            "sub_fields": [
-                                {
-                                    "key": "field_5c27eb58a5bf8",
-                                    "label": "OS Version",
-                                    "name": "os_version",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 1,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
-                                },
-                                {
-                                    "key": "field_5c27eb58a5bf9",
-                                    "label": "Download URL",
-                                    "name": "download_url",
-                                    "type": "url",
-                                    "instructions": "",
-                                    "required": 1,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": ""
-                                }
-                            ]
+                            "default_value": "",
+                            "placeholder": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_5c27eb58a5bf7",
+                    "label": "Debian",
+                    "name": "debian",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 1,
+                    "max": 0,
+                    "layout": "block",
+                    "button_label": "Add OS Version",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c27eb58a5bf8",
+                            "label": "OS Version",
+                            "name": "os_version",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
                         },
                         {
-                            "key": "field_5c27eb63a5bfa",
-                            "label": "Fedora",
-                            "name": "fedora",
-                            "type": "repeater",
+                            "key": "field_5c27eb58a5bf9",
+                            "label": "Download URL",
+                            "name": "download_url",
+                            "type": "url",
                             "instructions": "",
                             "required": 1,
                             "conditional_logic": 0,
@@ -309,48 +272,64 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "collapsed": "",
-                            "min": 1,
-                            "max": 0,
-                            "layout": "block",
-                            "button_label": "Add OS Version",
-                            "sub_fields": [
-                                {
-                                    "key": "field_5c27eb63a5bfb",
-                                    "label": "OS Version",
-                                    "name": "os_version",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 1,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
-                                },
-                                {
-                                    "key": "field_5c27eb63a5bfc",
-                                    "label": "Download URL",
-                                    "name": "download_url",
-                                    "type": "url",
-                                    "instructions": "",
-                                    "required": 1,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": ""
-                                }
-                            ]
+                            "default_value": "",
+                            "placeholder": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_5c27eb63a5bfa",
+                    "label": "Fedora",
+                    "name": "fedora",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 1,
+                    "max": 0,
+                    "layout": "block",
+                    "button_label": "Add OS Version",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c27eb63a5bfb",
+                            "label": "OS Version",
+                            "name": "os_version",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5c27eb63a5bfc",
+                            "label": "Download URL",
+                            "name": "download_url",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
                         }
                     ]
                 }
@@ -360,19 +339,24 @@
     "location": [
         [
             {
-                "param": "options_page",
+                "param": "post_type",
                 "operator": "==",
-                "value": "panda3d-downloads"
+                "value": "download"
+            },
+            {
+                "param": "post_taxonomy",
+                "operator": "==",
+                "value": "download_category:sdk"
             }
         ]
     ],
     "menu_order": 0,
     "position": "normal",
-    "style": "seamless",
+    "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1546120469
+    "modified": 1546290521
 }

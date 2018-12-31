@@ -1,6 +1,6 @@
 {
     "key": "group_59fcb725a4771",
-    "title": "Interface",
+    "title": "Theme Settings - Interface",
     "fields": [
         {
             "key": "field_59fcb7cf4be69",
@@ -231,5 +231,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1528835272
+    "modified": 1546287462
 }
