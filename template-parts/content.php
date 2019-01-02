@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-        <div class="background-image" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);"></div>
+        <?php panda3d_background_image() ?>
         <div class="text-box">
             <?php
             if ( is_singular() ) :

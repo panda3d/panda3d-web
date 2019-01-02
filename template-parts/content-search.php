@@ -11,19 +11,21 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+        <?php panda3d_background_image(); ?>
+        <div class="text-box">
+            <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php
-			panda3d_posted_on();
-			panda3d_posted_by();
-			?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
+            <?php if ( 'post' === get_post_type() ) : ?>
+            <div class="entry-meta">
+                <?php
+                panda3d_posted_on();
+                panda3d_posted_by();
+                ?>
+            </div><!-- .entry-meta -->
+            <?php endif; ?>
+        </div>
 	</header><!-- .entry-header -->
 
-	<?php panda3d_post_thumbnail(); ?>
 
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>

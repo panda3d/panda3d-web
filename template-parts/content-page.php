@@ -10,15 +10,17 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php if ( is_home() && ! is_front_page() ) { ?>
+	<?php if ( ! is_front_page() ) { ?>
 		<header class="entry-header">
-			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+            <?php panda3d_background_image(); ?>
+            <div class="text-box">
+                <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+            </div>
 		</header><!-- .entry-header -->
 	<?php } ?>
 
-	<?php panda3d_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="entry-content block">
 		<?php
 		the_content();
 
