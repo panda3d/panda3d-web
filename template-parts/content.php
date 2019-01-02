@@ -54,7 +54,10 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php panda3d_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+	<!-- <footer class="entry-footer">
+        <?php
+        panda3d_entry_footer();
+        the_post_navigation();
+        ?>
+	</footer> -->
+</article>
