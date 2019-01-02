@@ -51,9 +51,13 @@
 .entry-header {
     align-items: center;
     display: flex;
-    height: 50vh;
+    height: 30vh;
     position: relative;
     overflow: hidden;
+
+    @include breakpoint(large) {
+        height: 45vh;
+    }
 
     .text-box {
         margin: 0 auto;
