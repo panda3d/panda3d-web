@@ -17,6 +17,7 @@
 		width: $size__site-sidebar;
 	}
 }
+
 .site-footer {
 	clear: both;
 	width: $size__site-main;
@@ -47,14 +48,41 @@
 	margin: 1.5em 0 0;
 }
 
-.entry-content {
-	min-height: calc(100vh - 111px);
+.entry-header {
+    align-items: center;
+    display: flex;
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+
+    .text-box {
+        margin: 0 auto;
+        max-width: 1000px;
+        text-align: center;
+    }
+}
+
+.entry-content, .comments-area {
+    margin: 0 auto;
+    max-width: $size__container-medium;
+    min-height: calc(100vh - 111px);
+
+    @include breakpoint($size__container-medium) {
+        margin: 2rem auto;
+    }
 }
 
 .admin-bar {
 	.entry-content {
 		min-height: calc(100vh - 143px);
 	}
+}
+
+.page-template-flexible-content-page {
+    .entry-content {
+        margin: unset;
+        max-width: unset;
+    }
 }
 
 .page-links {
