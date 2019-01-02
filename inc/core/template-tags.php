@@ -127,6 +127,6 @@ if ( ! function_exists( 'panda3d_background_image' ) ) :
 
         ?>
         <div class="background-image" style="background-image: url(<?php echo $thumbnail_url; ?>);"></div>
-        <?
+        <?php
 	}
 endif;
