@@ -31,10 +31,8 @@ section.blog-posts {
 }
 
 .article {
-    background: #fff;
     border-bottom: 3px solid $color__theme-blue;
-    border-radius: 4px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    padding: 0;
     overflow: hidden;
     transition: transform $anim__hover-duration $anim__function-easein,
                 border-color $anim__hover-duration $anim__function-easein;

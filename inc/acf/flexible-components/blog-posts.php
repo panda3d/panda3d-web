@@ -28,7 +28,7 @@
         <div class="article__container">
 
             <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                <div class="article">
+                <div class="article block">
                     <a href="<?php the_permalink(); ?>">
                         <div class="article__image" style="background-image: url('<?php the_post_thumbnail_url('large'); ?>');"></div>
                         <div class="article__info">

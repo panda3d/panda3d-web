@@ -12,4 +12,9 @@
             text-align: center;
         }
     }
+
+    .entry-content, .comments-area {
+        margin: 2rem auto;
+        max-width: $size__container-medium;
+    }
 }

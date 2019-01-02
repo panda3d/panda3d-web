@@ -32,7 +32,7 @@
         </div>
 	</header>
 
-	<div class="entry-content">
+	<div class="entry-content block">
 		<?php
 		the_content( sprintf(
 			wp_kses(
