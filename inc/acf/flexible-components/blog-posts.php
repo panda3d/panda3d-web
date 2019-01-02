@@ -33,7 +33,7 @@
                         <div class="article__image" style="background-image: url('<?php the_post_thumbnail_url('large'); ?>');"></div>
                         <div class="article__info">
                             <span class="date"><?php the_date('F j, Y'); ?></span>
-                            <h2 class="title"><?php the_title(); ?></h2>
+                            <h3 class="title"><?php the_title(); ?></h3>
                         </div>
                     </a>
                 </div>

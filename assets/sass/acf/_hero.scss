@@ -50,11 +50,11 @@ section.hero {
 
     .cta {
         color: #fff;
-        @include font-size(1.6);
+        @include font-size(1.5);
 
         @include breakpoint(small, only) {
             display: block;
-            @include font-size(1.1);
+            @include font-size(1);
             margin: 1rem 2rem 0;
             padding: 0.75rem;
         }

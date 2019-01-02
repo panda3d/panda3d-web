@@ -3,7 +3,7 @@
 
         <div class="call-to-action__text">
             <h2><?php the_sub_field('header'); ?></h2>
-            <p class="subheader"><?php the_sub_field('description'); ?></p>
+            <p><?php the_sub_field('description'); ?></p>
 
             <div class="call-to-action__buttons">
                 <?php if(get_sub_field('display_secondary_button')) { ?>

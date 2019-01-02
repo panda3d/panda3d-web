@@ -2,7 +2,7 @@
     <div class="feature-images__outer">
 
         <h2><?php the_sub_field('header') ?></h2>
-        <p class="subheader"><?php the_sub_field('subheader') ?></p>
+        <p><?php the_sub_field('subheader') ?></p>
 
         <div class="feature-images__inner">
             <?php if( have_rows('feature_images') ): while ( have_rows('feature_images') ) : the_row(); ?>

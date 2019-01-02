@@ -3,7 +3,7 @@
 
         <div class="choices__text">
             <h2><?php the_sub_field('header'); ?></h2>
-            <p class="subheader"><?php the_sub_field('description'); ?></p>
+            <p><?php the_sub_field('description'); ?></p>
         </div>
 
         <div class="choices__buttons">
