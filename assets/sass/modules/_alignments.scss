@@ -16,7 +16,7 @@
 }
 
 .wrap {
-    max-width: 90rem;
+    max-width: $size__container-large;
 	margin: 0 auto;
 
 	@include breakpoint(1500px, down) {

@@ -13,7 +13,7 @@
     display: grid;
     grid-template-areas: 'icon'
                          'text';
-    max-width: 75rem;
+    max-width: $size__container-medium;
     margin: 0 auto;
     padding: 3rem 1rem;
     text-align: center;

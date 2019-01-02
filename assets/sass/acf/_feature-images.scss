@@ -1,6 +1,6 @@
 .feature-images__outer {
     display: flex;
-    max-width: 75rem;
+    max-width: $size__container-medium;
     margin: 0 auto;
     flex-direction: column;
     text-align: center;

@@ -9,7 +9,7 @@
     grid-template-areas: 'text-box';
     grid-template-columns: 1fr;
     height: auto;
-    max-width: 90rem;
+    max-width: $size__container-large;
     margin: 0 auto;
     padding: 4rem 0;
     text-align: center;
