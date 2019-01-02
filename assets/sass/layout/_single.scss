@@ -1,0 +1,15 @@
+.single {
+    .entry-header {
+        align-items: center;
+        display: flex;
+        height: 50vh;
+        position: relative;
+        overflow: hidden;
+
+        .text-box {
+            margin: 0 auto;
+            max-width: 1000px;
+            text-align: center;
+        }
+    }
+}
