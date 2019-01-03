@@ -21,7 +21,7 @@ function getOSIdentifier() {
     global $user_agent;
 
     // Attempt to get OS ID from the user agent string
-    $os_identifier = 'unknown';
+    $os_identifier = 'windows';
     foreach ($os_data as $id => $array) {
         $regex = $array[2];
         if (preg_match($regex, $user_agent)) {
