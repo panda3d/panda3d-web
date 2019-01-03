@@ -6,6 +6,7 @@
 $color__theme-purple: #735CDD;
 $color__theme-red: #DD5C5C;
 $color__theme-blue: #5CA7DD;
+$color__theme-gradient: linear-gradient(90deg, darken($color__theme-purple, 5%), lighten($color__theme-purple, 20%));
 $color__light: #ccc;
 $color__mid: #555;
 $color__dark: #323031;

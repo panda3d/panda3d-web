@@ -1,7 +1,7 @@
 .choices {
     align-items: center;
     background-color: darken($color__theme-purple, 5%);
-    background-image: linear-gradient(90deg, darken($color__theme-purple, 5%), lighten($color__theme-purple, 20%));
+    background-image: $color__theme-gradient;
     margin: 0 !important;
 
     @include breakpoint(medium down) {

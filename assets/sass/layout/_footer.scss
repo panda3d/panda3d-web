@@ -2,7 +2,7 @@
     background: $color__background-header;
     border-top: 5px solid;
     border-color: $color__theme-purple;
-    border-image: linear-gradient(90deg, darken($color__theme-purple, 5%), lighten($color__theme-purple, 20%)) 30;
+    border-image: $color__theme-gradient 30;
     color: #fff;
     width: 100%;
 
