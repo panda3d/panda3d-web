@@ -28,7 +28,7 @@
         margin-bottom: 0;
     }
 
-    h1 {
+    h1, h2 {
         margin: 0;
     }
 }
@@ -45,32 +45,15 @@
     }
 
     @include breakpoint(large) {
-        max-width: 75%;
+        max-width: 60%;
     }
 
     a {
-        @include font-size(1.25);
-        padding: 1.5rem;
+        padding: 1rem;
         width: 100%;
 
         @include breakpoint(medium) {
             margin-bottom: 0;
-        }
-
-        svg {
-            display: block;
-            @include font-size(2.5);
-            margin: 0 auto 0.5rem;
-        }
-    }
-
-    .cta--primary {
-        @include background-duotone($cta__color-alt, $cta__color-alt-hover);
-
-        &:hover,
-        &:active,
-        &:focus {
-            background-color: $cta__color-alt-hover;
         }
     }
 
