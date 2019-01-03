@@ -1,7 +1,14 @@
 .download__header {
+    align-items: center;
     background: $color__theme-gradient;
     color: white;
+    display: flex;
     padding: 4rem 1rem;
+
+    @include breakpoint(large) {
+        height: 45vh;
+        padding: 0;
+    }
 
     a:not(.cta) {
         color: white;
@@ -11,21 +18,35 @@
         }
     }
 
-    .cta--primary {
-        @include font-size(1.25);
+    .cta--primary-ver {
+        @include breakpoint(small, only) {
+            @include font-size(0.9);
+        }
     }
 }
 
 .download__header-container {
+    align-items: center;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr;
     margin: 0 auto;
     max-width: $size__container-small;
+    text-align: center;
+
+    @include breakpoint(large) {
+        grid-template-columns: 2fr 1fr;
+        text-align: left;
+    }
 }
 
 .download__icon {
-    @include font-size(10);
-    text-align: right;
+    display: none;
+
+    @include breakpoint(large) {
+        display: block;
+        @include font-size(10);
+        text-align: right;
+    }
 }
 
 .download__content {
@@ -44,5 +65,9 @@
 
 .download__others {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+
+    @include breakpoint(large) {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

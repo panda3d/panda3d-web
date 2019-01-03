@@ -66,7 +66,7 @@ get_header();
                                 </a>
                             </p>
 
-                            <p><a href="#">...Or choose a different version.</a></p>
+                            <p><a href="#">...Or choose an older version.</a></p>
                         </div>
 
                         <div class="download__icon">
