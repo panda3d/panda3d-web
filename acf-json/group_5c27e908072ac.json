@@ -74,8 +74,8 @@
                     "sub_fields": [
                         {
                             "key": "field_5c27eacca5bef",
-                            "label": "OS Version",
-                            "name": "os_version",
+                            "label": "Download Label",
+                            "name": "download_label",
                             "type": "text",
                             "instructions": "",
                             "required": 1,
@@ -130,8 +130,8 @@
                     "sub_fields": [
                         {
                             "key": "field_5c27eb1fa5bf2",
-                            "label": "OS Version",
-                            "name": "os_version",
+                            "label": "Download Label",
+                            "name": "download_label",
                             "type": "text",
                             "instructions": "",
                             "required": 1,
@@ -186,8 +186,8 @@
                     "sub_fields": [
                         {
                             "key": "field_5c27eb30a5bf5",
-                            "label": "OS Version",
-                            "name": "os_version",
+                            "label": "Download Label",
+                            "name": "download_label",
                             "type": "text",
                             "instructions": "",
                             "required": 1,
@@ -242,8 +242,8 @@
                     "sub_fields": [
                         {
                             "key": "field_5c27eb58a5bf8",
-                            "label": "OS Version",
-                            "name": "os_version",
+                            "label": "Download Label",
+                            "name": "download_label",
                             "type": "text",
                             "instructions": "",
                             "required": 1,
@@ -298,8 +298,8 @@
                     "sub_fields": [
                         {
                             "key": "field_5c27eb63a5bfb",
-                            "label": "OS Version",
-                            "name": "os_version",
+                            "label": "Download Label",
+                            "name": "download_label",
                             "type": "text",
                             "instructions": "",
                             "required": 1,
@@ -358,5 +358,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1546494407
+    "modified": 1546502725
 }

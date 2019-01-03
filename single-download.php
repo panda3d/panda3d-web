@@ -62,7 +62,7 @@ get_header();
                             <p>
                                 <a class="cta cta--primary-ver" href="<?php echo $primary_download[0]['download_url']; ?>">
                                     <span class="cta-ver"><?php echo get_the_title(); ?></span>
-                                    <span class="cta-text"><i class="fab fa-windows"></i> <?php echo $primary_download[0]['os_version']; ?></span>
+                                    <span class="cta-text"><i class="fab fa-windows"></i> <?php echo $primary_download[0]['download_label']; ?></span>
                                 </a>
                             </p>
 
@@ -95,7 +95,7 @@ get_header();
                                         <?php foreach($os_field as $os_download) { ?>
                                             <li>
                                                 <a href="<?php echo $os_download['download_url']; ?>">
-                                                    <?php echo $os_download['os_version']; ?>
+                                                    <?php echo $os_download['download_label']; ?>
                                                 </a>
                                             </li>
                                         <?php } ?>
