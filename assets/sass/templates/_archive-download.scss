@@ -1,4 +1,39 @@
 .archive-download__content {
+    padding: 4rem 1rem;
     margin: 0 auto;
     max-width: $size__container-small;
+}
+
+.archive-download__list {
+    padding: 0;
+    list-style: none;
+
+    a {
+        display: block;
+        color: unset;
+        text-decoration: none;
+
+        &:hover, &:active, &:focus {
+            background-color: #E9E9E9;
+        }
+    }
+
+    li {
+        display: flex;
+        padding: 1rem;
+
+        .title {
+            font-weight: bold;
+        }
+
+        .date {
+            margin-left: auto;
+        }
+    }
+
+    > li {
+        background: $color__theme-blue;
+        color: white;
+        font-weight: bold;
+    }
 }

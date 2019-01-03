@@ -51,7 +51,11 @@ get_header();
 
             <div class="archive-download__content">
                 <h1>Old Versions</h1>
-                <ul class="block">
+                <ul class="archive-download__list block">
+                    <li>
+                        <span class="title">Version</span>
+                        <span class="date">Release Date</span>
+                    </li>
                     <?php
                     /* Start the Loop */
                     while ( have_posts() ) :
@@ -63,12 +67,12 @@ get_header();
 
                         $release_date = date_i18n(get_option('date_format'), strtotime(get_field('release_date')));
                         ?>
-                        <li>
-                            <a href="<?php echo get_permalink(); ?>">
-                                <?php the_title(); ?>
-                                <?php the_date(); ?>
-                            </a>
-                        </li>
+                        <a href="<?php echo get_permalink(); ?>">
+                            <li>
+                                <span class="title"><?php the_title(); ?></span>
+                                <span class="date"><?php the_date(); ?></span>
+                            </li>
+                        </a>
                         <?php
                     endwhile;
                     ?>
