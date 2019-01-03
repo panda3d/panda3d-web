@@ -69,16 +69,20 @@
 .entry-content, .comments-area {
     margin: 0 auto;
     max-width: $size__container-medium;
-    min-height: calc(100vh - 111px);
 
     @include breakpoint($size__container-medium) {
         margin: 2rem auto;
     }
 }
 
+
+// Set minimum page height to push the footer to the bottom
+.site-content {
+    min-height: calc(100vh - #{$size__header-height} - 334px);
+}
 .admin-bar {
-	.entry-content {
-		min-height: calc(100vh - 143px);
+	.site-content {
+		min-height: calc(100vh - #{$size__header-height} - #{$size__admin-height} - 334px);
 	}
 }
 
