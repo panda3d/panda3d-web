@@ -66,7 +66,7 @@ get_header();
                                 </a>
                             </p>
 
-                            <p><a href="#">...Or choose an older version.</a></p>
+                            <p><a href="<?php echo get_post_type_archive_link('download'); ?>">...Or choose an older version.</a></p>
                         </div>
 
                         <div class="download__icon">
@@ -76,9 +76,9 @@ get_header();
                     </div>
                 </header>
 
-                <div class="download__content">
+                <div class="single-download__content">
                     <h1>Other Downloads</h1>
-                    <div class="download__others block">
+                    <div class="single-download__others block">
 
                         <?php
                         // Cycle through OS data to list downloads for all systems

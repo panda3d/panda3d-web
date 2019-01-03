@@ -49,7 +49,7 @@
     }
 }
 
-.download__content {
+.single-download__content {
     padding: 4rem 1rem;
     margin: 0 auto;
     max-width: $size__container-medium;
@@ -63,7 +63,7 @@
     }
 }
 
-.download__others {
+.single-download__others {
     display: grid;
     grid-template-columns: 1fr;
 
