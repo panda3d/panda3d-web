@@ -13,7 +13,7 @@
     height: auto;
     max-width: $size__container-large;
     margin: 0 auto;
-    padding: 4rem 0;
+    padding: 4rem 1rem;
     text-align: center;
 
     @include breakpoint(large) {
