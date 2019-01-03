@@ -33,12 +33,12 @@ address {
 pre {
 	background: $color__background-pre;
 	font-family: $font__pre;
-	@include font-size(0.9375);
+	@include font-size(0.75);
 	line-height: $font__line-height-pre;
 	margin-bottom: 1.6em;
 	max-width: 100%;
 	overflow: auto;
-	padding: 1.6em;
+	padding: 1rem;
 }
 
 code, kbd, tt, var {
