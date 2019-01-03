@@ -23,7 +23,9 @@
         transition: 0.2s filter;
         max-width: 100%;
         width: 32%;
-        animation: colorIval 5s linear infinite;
+        // Runs an animation on the images to highlight specific logos.
+        // Disabled for now due to feedback.
+        // animation: colorIval 5s linear infinite;
 
         @include breakpoint(medium) {
             padding: 0 2rem;
