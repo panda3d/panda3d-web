@@ -77,6 +77,17 @@ get_header();
                 </header>
 
                 <div class="single-download__content">
+
+                    <div class="block block--info">
+                        <div class="block__icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="block__content">
+                            <p>Already a Python user? You can install this version of Panda3D with pip!</p>
+                            <pre>pip install panda3d==<?php echo get_the_title(); ?></pre>
+                        </div>
+                    </div>
+
                     <h1>Other Downloads</h1>
                     <div class="single-download__others block">
 

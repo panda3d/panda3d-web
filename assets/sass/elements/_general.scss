@@ -60,9 +60,42 @@ object {
 }
 
 .block {
-    background: #fff;
+    background-color: #fff;
     border-radius: 4px;
     box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.15);
     overflow: hidden;
-    padding: 2rem;
+    padding: 1rem 2rem;
+}
+
+.block--info {
+    align-items: center;
+    background-color: $color__theme-blue;
+    color: white;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr 9fr;
+
+    .block__icon {
+        padding: 0.5rem;
+
+        svg {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .block__content {
+        :first-child {
+            margin-top: 0;
+        }
+
+        :last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    pre {
+        background: lighten($color__theme-blue, 5%);
+        font-size: 1rem;
+    }
 }

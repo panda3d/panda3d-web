@@ -54,12 +54,8 @@
     margin: 0 auto;
     max-width: $size__container-medium;
 
-    h1{
+    h1 {
         margin-top: 2rem;
-
-        &:first-of-type {
-            margin-top: 0;
-        }
     }
 }
 
