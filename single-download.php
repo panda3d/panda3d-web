@@ -109,7 +109,7 @@ get_header();
 
                     </div>
 
-                    <h1>Release Notes</h1>
+                    <h1>Release Notes - <?php echo get_the_title(); ?></h1>
                     <div class="block">
                         <?php the_field('release_notes'); ?>
                     </div>
