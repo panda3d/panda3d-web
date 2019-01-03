@@ -1,5 +1,5 @@
 .page-template-flexible-content-page {
-    section {
+    section:not(.hero):not(.info-block):not(.call-to-action-alt) {
         margin: $size__component-padding;
         overflow: hidden;
         padding-left: 1rem;

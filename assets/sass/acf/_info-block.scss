@@ -1,6 +1,8 @@
 .info-block {
     align-items: center;
     margin: 0 !important;
+    overflow: hidden;
+    position: relative;
 }
 
 .info-block__wrap {
