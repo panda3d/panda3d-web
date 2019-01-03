@@ -50,13 +50,12 @@ section.hero {
 
     .cta {
         color: #fff;
-        @include font-size(1.5);
+        @include font-size(1);
+        margin: 1rem 2rem 0;
 
-        @include breakpoint(small, only) {
-            display: block;
-            @include font-size(1);
-            margin: 1rem 2rem 0;
-            padding: 0.75rem;
+        @include breakpoint(large) {
+            @include font-size(1.5);
+            margin: 0;
         }
 
         &:hover, &:active, &:focus {

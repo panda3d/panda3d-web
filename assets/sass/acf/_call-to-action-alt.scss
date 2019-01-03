@@ -14,10 +14,14 @@
     text-align: center;
 
     @include breakpoint(large) {
-        grid-gap: 4rem;
-        grid-template-columns: 3fr 1fr;
+        grid-gap: 2rem;
+        grid-template-columns: 3fr 2fr;
         height: $size__hero-height;
         padding: 0;
+    }
+
+    @include breakpoint(xlarge) {
+        grid-template-columns: 4fr 2fr;
     }
 }
 
@@ -42,10 +46,10 @@
     }
 
     .cta {
-        @include font-size(1.5);
+        @include font-size(1);
 
-        @include breakpoint(small only) {
-            display: block;
+        @include breakpoint(large) {
+            @include font-size(1.5);
         }
 
         &:not(:first-of-type) {
