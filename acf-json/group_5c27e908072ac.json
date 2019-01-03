@@ -3,23 +3,6 @@
     "title": "SDK Download - Attributes",
     "fields": [
         {
-            "key": "field_5c27e9a8cf1fb",
-            "label": "Release Date",
-            "name": "release_date",
-            "type": "date_time_picker",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "display_format": "m\/d\/Y g:i a",
-            "return_format": "Y-m-d H:i:s",
-            "first_day": 0
-        },
-        {
             "key": "field_5c2a7e25bbfc9",
             "label": "Release Notes",
             "name": "release_notes",
@@ -358,5 +341,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1546502725
+    "modified": 1546507131
 }
