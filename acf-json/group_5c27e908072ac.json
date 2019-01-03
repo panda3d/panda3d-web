@@ -55,8 +55,8 @@
             "sub_fields": [
                 {
                     "key": "field_5c27eab3a5bee",
-                    "label": "Microsoft Windows",
-                    "name": "microsoft_windows",
+                    "label": "Windows",
+                    "name": "windows",
                     "type": "repeater",
                     "instructions": "",
                     "required": 1,
@@ -358,5 +358,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1546290521
+    "modified": 1546494407
 }

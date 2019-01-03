@@ -57,9 +57,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "layout/widgets";
 
 /**
+ * Page Templates
+ */
+@import "templates/flexible-content";
+@import "templates/single-download";
+
+/**
  * Advanced Custom Fields
  */
- @import "acf/flexible-content";
  @import "acf/blog-posts";
  @import "acf/brand-showcase";
  @import "acf/call-to-action";

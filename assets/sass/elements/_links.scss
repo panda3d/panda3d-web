@@ -20,7 +20,8 @@ a {
 
 	&:hover, &:active, &:focus {
 		background-color: $cta__color-hover;
-		color: #fff;
+        color: #fff;
+        outline: none;
 	}
 
 	svg {
@@ -32,6 +33,35 @@ a {
 	@include transition-color-slide($cta__color, $cta__color-hover);
 	color: #fff;
 	padding: calc(1rem + #{$cta__border-size}) calc(1.5rem + #{$cta__border-size});
+}
+
+.cta--primary-ver {
+    background-color: darken($cta__color, 5%);
+    color: #fff;
+    padding: 0;
+
+	&:hover, &:active, &:focus {
+        background-color: darken($cta__color, 5%);
+
+        .cta-text {
+            background-position: 0 100%;
+        }
+	}
+
+    span {
+        display: inline-block;
+        padding: 1rem;
+    }
+
+    .cta-ver {
+        font-weight: bold;
+    }
+
+    .cta-text {
+        @include background-duotone($cta__color, $cta__color-hover);
+        background-size: 100% 200%;
+        transition: all $anim__hover-duration $anim__function-easein;
+    }
 }
 
 .cta--secondary {
