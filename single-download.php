@@ -7,13 +7,15 @@
 
 // This array contains data for all supported OS downloads
 $os_data = [
-    // 'ID'   => ['name',    'icon-class',     'regex']
-    'windows' => ['Windows', 'fab fa-windows', '/win16|win95|win98|windows/i'],
-    'macos'   => ['macOS',   'fab fa-apple',   '/macintosh|mac os x|mac_powerpc/i'],
-    'ubuntu'  => ['Ubuntu',  'fab fa-ubuntu',  '/ubuntu/i'],
-    'debian'  => ['Debian',  'fas fa-hdd',     '/debian/i'],
-    'fedora'  => ['Fedora',  'fab fa-fedora',  '/fedora/i'],
-    'other'   => ['Other',   'fas fa-download', null]
+    // 'ID'   => ['name',            'icon-class',     'regex']
+    'windows' => ['Windows',         'fab fa-windows', '/win16|win95|win98|windows/i'],
+    'macos'   => ['macOS',           'fab fa-apple',   '/macintosh|mac os x|mac_powerpc/i'],
+    'ubuntu'  => ['Ubuntu',          'fab fa-ubuntu',  '/ubuntu/i'],
+    'debian'  => ['Debian',          'fas fa-hdd',     '/debian/i'],
+    'fedora'  => ['Fedora',          'fab fa-fedora',  '/fedora/i'],
+    'source'  => ['Source Code',     'fas fa-code',     null],
+    'sample'  => ['Sample Programs', 'fas fa-dice-d6',  null],
+    'other'   => ['Other',           'fas fa-download', null], # Deprecated
 ];
 $user_agent = $_SERVER["HTTP_USER_AGENT"];
 
@@ -22,8 +24,8 @@ function getOSIdentifier() {
     global $user_agent;
 
     // Attempt to get OS ID from the user agent string
-    foreach ($os_data as $id => $array) {
     $os_identifier = 'windows';
+    foreach ($os_data as $id => $array) {
         $regex = $array[2];
         if (!is_null($regex) && preg_match($regex, $user_agent)) {
             $os_identifier = $id;
@@ -55,7 +57,9 @@ get_header();
                             // Attempt to determine primary download from the user's OS
                             if(have_rows('downloads')) {
                                 while(have_rows('downloads')): the_row();
-                                    $primary_download = get_sub_field(getOSIdentifier());
+                                    $os_id = getOSIdentifier();
+                                    $os_icon = $os_data[$os_id][1];
+                                    $primary_download = get_sub_field($os_id);
                                 endwhile;
                             }
                             ?>
@@ -63,7 +67,7 @@ get_header();
                             <p>
                                 <a class="cta cta--primary-ver" href="<?php echo $primary_download[0]['download_url']; ?>">
                                     <span class="cta-ver"><?php echo get_the_title(); ?></span>
-                                    <span class="cta-text"><i class="fab fa-windows"></i> <?php echo $primary_download[0]['download_label']; ?></span>
+                                    <span class="cta-text"><i class="<?php echo $os_icon; ?>"></i> <?php echo $primary_download[0]['download_label']; ?></span>
                                 </a>
                             </p>
 
@@ -105,7 +109,7 @@ get_header();
                                         $os_icon = $os_array[1];
                                         ?>
                                         <div>
-                                            <h3><i class="<?php echo $os_icon; ?>"></i> <?php echo $os_name; ?></h3>
+                                            <h3><i class="<?php echo $os_icon; ?>"></i>&nbsp;&nbsp;<?php echo $os_name; ?></h3>
                                             <ul>
                                             <?php foreach($os_field as $os_download) { ?>
                                                 <li>

@@ -355,6 +355,118 @@
                     ]
                 },
                 {
+                    "key": "field_5c2e8a301219d",
+                    "label": "Source Code",
+                    "name": "source",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "field_5c27eb63a5bfb",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "block",
+                    "button_label": "Add Download",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c2e8a301219e",
+                            "label": "Download Label",
+                            "name": "download_label",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5c2e8a301219f",
+                            "label": "Download URL",
+                            "name": "download_url",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_5c2e8a45121a0",
+                    "label": "Sample Programs",
+                    "name": "sample",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "field_5c27eb63a5bfb",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "block",
+                    "button_label": "Add Download",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c2e8a45121a1",
+                            "label": "Download Label",
+                            "name": "download_label",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5c2e8a45121a2",
+                            "label": "Download URL",
+                            "name": "download_url",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
+                        }
+                    ]
+                },
+                {
                     "key": "field_5c2e6b3b38790",
                     "label": "Other",
                     "name": "other",
@@ -435,5 +547,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1546546457
+    "modified": 1546554671
 }
