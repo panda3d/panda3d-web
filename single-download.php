@@ -86,22 +86,24 @@ get_header();
                             while(have_rows('downloads')): the_row();
                                 foreach($os_data as $os_id => $os_array) {
                                     $os_field = get_sub_field($os_id);
-                                    $os_name = $os_array[0];
-                                    $os_icon = $os_array[1];
-                                    ?>
-                                    <div>
-                                        <h3><i class="<?php echo $os_icon; ?>"></i> <?php echo $os_name; ?></h3>
-                                        <ul>
-                                        <?php foreach($os_field as $os_download) { ?>
-                                            <li>
-                                                <a href="<?php echo $os_download['download_url']; ?>">
-                                                    <?php echo $os_download['download_label']; ?>
-                                                </a>
-                                            </li>
-                                        <?php } ?>
-                                        </ul>
-                                    </div>
-                                    <?php
+                                    if(!empty($os_field)) {
+                                        $os_name = $os_array[0];
+                                        $os_icon = $os_array[1];
+                                        ?>
+                                        <div>
+                                            <h3><i class="<?php echo $os_icon; ?>"></i> <?php echo $os_name; ?></h3>
+                                            <ul>
+                                            <?php foreach($os_field as $os_download) { ?>
+                                                <li>
+                                                    <a href="<?php echo $os_download['download_url']; ?>">
+                                                        <?php echo $os_download['download_label']; ?>
+                                                    </a>
+                                                </li>
+                                            <?php } ?>
+                                            </ul>
+                                        </div>
+                                        <?php
+                                    }
                                 }
                             endwhile;
                         }

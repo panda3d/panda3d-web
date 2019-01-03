@@ -27,7 +27,7 @@
             "name": "downloads",
             "type": "group",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -42,7 +42,7 @@
                     "name": "windows",
                     "type": "repeater",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -50,10 +50,10 @@
                         "id": ""
                     },
                     "collapsed": "field_5c27eacca5bef",
-                    "min": 1,
+                    "min": 0,
                     "max": 0,
                     "layout": "block",
-                    "button_label": "Add OS Version",
+                    "button_label": "Add Download",
                     "sub_fields": [
                         {
                             "key": "field_5c27eacca5bef",
@@ -98,18 +98,18 @@
                     "name": "macos",
                     "type": "repeater",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "collapsed": "",
-                    "min": 1,
+                    "collapsed": "field_5c27eb1fa5bf2",
+                    "min": 0,
                     "max": 0,
                     "layout": "block",
-                    "button_label": "Add OS Version",
+                    "button_label": "Add Download",
                     "sub_fields": [
                         {
                             "key": "field_5c27eb1fa5bf2",
@@ -154,18 +154,18 @@
                     "name": "ubuntu",
                     "type": "repeater",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "collapsed": "",
-                    "min": 1,
+                    "collapsed": "field_5c27eb30a5bf5",
+                    "min": 0,
                     "max": 0,
                     "layout": "block",
-                    "button_label": "Add OS Version",
+                    "button_label": "Add Download",
                     "sub_fields": [
                         {
                             "key": "field_5c27eb30a5bf5",
@@ -210,18 +210,18 @@
                     "name": "debian",
                     "type": "repeater",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "collapsed": "",
-                    "min": 1,
+                    "collapsed": "field_5c27eb58a5bf8",
+                    "min": 0,
                     "max": 0,
                     "layout": "block",
-                    "button_label": "Add OS Version",
+                    "button_label": "Add Download",
                     "sub_fields": [
                         {
                             "key": "field_5c27eb58a5bf8",
@@ -266,18 +266,18 @@
                     "name": "fedora",
                     "type": "repeater",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "collapsed": "",
-                    "min": 1,
+                    "collapsed": "field_5c27eb63a5bfb",
+                    "min": 0,
                     "max": 0,
                     "layout": "block",
-                    "button_label": "Add OS Version",
+                    "button_label": "Add Download",
                     "sub_fields": [
                         {
                             "key": "field_5c27eb63a5bfb",
@@ -341,5 +341,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1546507131
+    "modified": 1546536744
 }
