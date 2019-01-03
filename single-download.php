@@ -11,8 +11,9 @@ $os_data = [
     'windows' => ['Windows', 'fab fa-windows', '/win16|win95|win98|windows/i'],
     'macos'   => ['macOS',   'fab fa-apple',   '/macintosh|mac os x|mac_powerpc/i'],
     'ubuntu'  => ['Ubuntu',  'fab fa-ubuntu',  '/ubuntu/i'],
-    'fedora'  => ['Fedora',  'fab fa-fedora',  '/fedora/i'],
     'debian'  => ['Debian',  'fas fa-hdd',     '/debian/i'],
+    'fedora'  => ['Fedora',  'fab fa-fedora',  '/fedora/i'],
+    'other'   => ['Other',   'fas fa-download', null]
 ];
 $user_agent = $_SERVER["HTTP_USER_AGENT"];
 
@@ -21,10 +22,10 @@ function getOSIdentifier() {
     global $user_agent;
 
     // Attempt to get OS ID from the user agent string
-    $os_identifier = 'windows';
     foreach ($os_data as $id => $array) {
+    $os_identifier = 'windows';
         $regex = $array[2];
-        if (preg_match($regex, $user_agent)) {
+        if (!is_null($regex) && preg_match($regex, $user_agent)) {
             $os_identifier = $id;
         }
     }
@@ -78,15 +79,17 @@ get_header();
 
                 <div class="single-download__content">
 
-                    <div class="block block--info">
-                        <div class="block__icon">
-                            <i class="fab fa-python"></i>
+                    <?php if(get_field('pip_supported')) { ?>
+                        <div class="block block--info">
+                            <div class="block__icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="block__content">
+                                <p>Already a Python user? You can install this version of Panda3D with pip!</p>
+                                <pre>pip install panda3d==<?php the_field('version_number'); ?></pre>
+                            </div>
                         </div>
-                        <div class="block__content">
-                            <p>Already a Python user? You can install this version of Panda3D with pip!</p>
-                            <pre>pip install panda3d==<?php echo get_the_title(); ?></pre>
-                        </div>
-                    </div>
+                    <?php } ?>
 
                     <h1>Other Downloads</h1>
                     <div class="single-download__others block">

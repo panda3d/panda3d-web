@@ -3,6 +3,44 @@
     "title": "SDK Download - Attributes",
     "fields": [
         {
+            "key": "field_5c2e6b89708b4",
+            "label": "Version Number",
+            "name": "version_number",
+            "type": "text",
+            "instructions": "Enter the version number for this download with no other text. (e.g. 1.10.0)",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "1.10.0",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5c2e6a5e3878e",
+            "label": "pip Supported",
+            "name": "pip_supported",
+            "type": "true_false",
+            "instructions": "Can this version be downloaded via pip?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_5c2a7e25bbfc9",
             "label": "Release Notes",
             "name": "release_notes",
@@ -315,6 +353,62 @@
                             "placeholder": ""
                         }
                     ]
+                },
+                {
+                    "key": "field_5c2e6b3b38790",
+                    "label": "Other",
+                    "name": "other",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "field_5c27eb63a5bfb",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "block",
+                    "button_label": "Add Download",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c2e6b3b38791",
+                            "label": "Download Label",
+                            "name": "download_label",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5c2e6b3b38792",
+                            "label": "Download URL",
+                            "name": "download_url",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
+                        }
+                    ]
                 }
             ]
         }
@@ -341,5 +435,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1546536744
+    "modified": 1546546457
 }
