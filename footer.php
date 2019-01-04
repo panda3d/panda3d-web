@@ -51,7 +51,7 @@
                 <?php
                 $date_start = get_field('copyright_year', 'option');
                 $date_current = date("Y");
-                if(strcmp($date_start, $date_current) == 0) {
+                if(strcmp($date_start, $date_current) === 0) {
                     $date_string = $date_start;
                 } else {
                     $date_string = $date_start . '-' . $date_current;

@@ -61,7 +61,7 @@ get_header();
                     while ( have_posts() ) :
                         the_post();
 
-                        if(get_the_ID() == $latest_id) {
+                        if(get_the_ID() === $latest_id) {
                             continue;
                         }
 
