@@ -125,7 +125,7 @@
             "key": "field_59fcb8c34be6d",
             "label": "Secondary Call to Action URL",
             "name": "secondary_call_to_action_url",
-            "type": "page_link",
+            "type": "link",
             "instructions": "Text to display on secondary Call to Action buttons.",
             "required": 1,
             "conditional_logic": [
@@ -142,14 +142,7 @@
                 "class": "",
                 "id": ""
             },
-            "post_type": [
-                "page",
-                "post"
-            ],
-            "taxonomy": [],
-            "allow_null": 0,
-            "allow_archives": 0,
-            "multiple": 0
+            "return_format": "url"
         },
         {
             "key": "field_5b202c1bfae43",
@@ -201,5 +194,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1546560579
+    "modified": 1546566135
 }

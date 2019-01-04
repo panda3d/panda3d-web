@@ -200,132 +200,6 @@
                     "min": "",
                     "max": ""
                 },
-                "59d7de2118d48": {
-                    "key": "59d7de2118d48",
-                    "name": "plan",
-                    "label": "Plan",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_59d7de2918d49",
-                            "label": "Header",
-                            "name": "header",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 1,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "Provide a step by step plan.",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_59d7de7a18d4a",
-                            "label": "Subheader",
-                            "name": "subheader",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 1,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "Make sure it's not too long. Just a summary of the major steps.",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_59deb44f1f6be",
-                            "label": "Steps",
-                            "name": "steps",
-                            "type": "repeater",
-                            "instructions": "",
-                            "required": 1,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "collapsed": "",
-                            "min": 2,
-                            "max": 5,
-                            "layout": "table",
-                            "button_label": "Add Step",
-                            "sub_fields": [
-                                {
-                                    "key": "field_59d7df7318d4f",
-                                    "label": "Title",
-                                    "name": "title",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 1,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "X. Take Action",
-                                    "placeholder": "X. Action Text Here",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
-                                },
-                                {
-                                    "key": "field_59d7dfd018d53",
-                                    "label": "Description",
-                                    "name": "description",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 1,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "Elaborate a little bit, with information about why this plan works.",
-                                    "placeholder": "Description of the action...",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
-                                },
-                                {
-                                    "key": "field_59d7dfcf18d52",
-                                    "label": "Icon",
-                                    "name": "icon",
-                                    "type": "text",
-                                    "instructions": "Enter an icon name from http:\/\/fontawesome.io\/icons\/. Example: \"fa-flag\"",
-                                    "required": 1,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "fa-flag",
-                                    "placeholder": "fa-flag",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
-                                }
-                            ]
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
                 "59d7e86e1746a": {
                     "key": "59d7e86e1746a",
                     "name": "call_to_action",
@@ -1237,7 +1111,7 @@
                                     "key": "field_5b847a17a85cb",
                                     "label": "URL",
                                     "name": "url",
-                                    "type": "page_link",
+                                    "type": "link",
                                     "instructions": "",
                                     "required": 1,
                                     "conditional_logic": 0,
@@ -1246,14 +1120,7 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "post_type": [
-                                        "page",
-                                        "post"
-                                    ],
-                                    "taxonomy": [],
-                                    "allow_null": 0,
-                                    "allow_archives": 1,
-                                    "multiple": 0
+                                    "return_format": "url"
                                 },
                                 {
                                     "key": "field_5b847a4fa85cc",
@@ -1480,5 +1347,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1546287554
+    "modified": 1546566161
 }
