@@ -64,19 +64,29 @@ object {
     border-radius: 4px;
     box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.15);
     overflow: hidden;
-    padding: 1rem 2rem;
+    padding: 1rem;
+
+    @include breakpoint(medium) {
+        padding: 2rem;
+    }
 }
 
 .block--info {
-    align-items: center;
     background-color: $color__theme-blue;
     color: white;
     display: grid;
-    grid-gap: 2rem;
+    grid-gap: 1rem;
     grid-template-columns: 1fr 9fr;
 
+    @include breakpoint(medium) {
+        align-items: center;
+        grid-gap: 2rem;
+    }
+
     .block__icon {
-        padding: 0.5rem;
+        @include breakpoint(large) {
+            padding: 0.5rem;
+        }
 
         svg {
             width: 100%;
@@ -96,6 +106,9 @@ object {
 
     pre {
         background: lighten($color__theme-blue, 5%);
-        font-size: 1rem;
+
+        @include breakpoint(medium) {
+            @include font-size(1);
+        }
     }
 }
