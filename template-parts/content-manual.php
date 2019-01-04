@@ -17,7 +17,20 @@
         </div>
 	</header>
 
-	<div class="entry-content block">
+
+
+	<div class="entry-content">
+        <div class="block block--info block--warning">
+            <div class="block__icon">
+                <i class="fas fa-tools"></i>
+            </div>
+            <div class="block__content">
+                <h3>Don't mind the mess!</h3>
+                <p>We're currently in the process of migrating the Panda3D Manual to a new service. This is a temporary layout in the meantime.</p>
+            </div>
+        </div>
+
+        <div class="block">
 		<?php
 		$prev = manual_prev();
 		$top = manual_top();
@@ -61,7 +74,8 @@
 		if ($next) {
 			echo ' <a href="' . $next . '">Next</a>';
 		}
-		?>
+        ?>
+        </div>
 	</div><!-- .entry-content -->
 
 	<!-- <footer class="entry-footer">

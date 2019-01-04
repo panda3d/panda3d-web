@@ -67,7 +67,11 @@ object {
     padding: 1rem;
 
     @include breakpoint(medium) {
-        padding: 2rem;
+        padding: 1rem 2rem;
+    }
+
+    + .block {
+        margin-top: 2rem;
     }
 }
 
@@ -111,4 +115,8 @@ object {
             @include font-size(1);
         }
     }
+}
+
+.block--warning {
+    background-color: $color__theme-red;
 }
