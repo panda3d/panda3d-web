@@ -17,11 +17,7 @@
             <h2><?php the_sub_field('header'); ?></h2>
 
             <div class="blog-posts__more">
-                <?php if ($news_category === '') { ?>
-                    <a href="/news/" class="cta cta--action">All Posts</a>
-                <?php } else { ?>
-                    <a href="/category/<?php echo $selected_category; ?>" class="cta cta--action">View More</a>
-                <?php } ?>
+                <a href="/blog/" class="cta cta--action">View More</a>
             </div>
         </div>
 

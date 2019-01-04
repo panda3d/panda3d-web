@@ -13,40 +13,47 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-		<?php if ( have_posts() ) : ?>
+		<?php if (have_posts()) { ?>
 
-			<header class="page-header">
-				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+			<header class="archive__header">
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+                <?php if (is_home()) { ?>
+                    <h1 class="page-title">Latest Blog Posts</h1>
+                <?php } else { ?>
+                    <?php
+                    the_archive_title( '<h1 class="page-title">', '</h1>' );
+                    the_archive_description( '<div class="archive-description">', '</div>' );
+                    ?>
+                <?php } ?>
+			</header>
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+            <div class="archive__content">
+                <?php while (have_posts()) { ?>
+                    <?php the_post(); ?>
 
-			endwhile;
+                    <div class="archive__item block">
+                        <?php
+                        if ( has_post_thumbnail() ) {
+                            $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'medium');
+                        } else {
+                            $thumbnail_url = get_field('default_post_thumbnail', 'option');
+                        }
+                        ?>
+                        <a class="article__image" style="background-image: url('<?php echo $thumbnail_url; ?>');" href="<?php the_permalink(); ?>"></a>
+                        <div class="article__info">
+                            <span class="date"><?php the_date() ?></span>
+                           <h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h2>
+                            <p class="summary"><?php echo get_the_excerpt() ?></p>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
 
-			the_posts_navigation();
+			<?php the_posts_navigation(); ?>
+        <?php } ?>
 
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+		</main>
+	</div>
 
 <?php
 get_footer();

@@ -32,7 +32,7 @@ section.blog-posts {
 
 .article {
     border-bottom: 3px solid $color__theme-blue;
-    padding: 0;
+    padding: 0 !important;
     overflow: hidden;
     transition: transform $anim__hover-duration $anim__function-easein,
                 border-color $anim__hover-duration $anim__function-easein;
@@ -65,8 +65,7 @@ section.blog-posts {
     }
 
     .title {
-        color: $color__mid;
-        font-weight: normal;
+        font-weight: unset;
         line-height: 1.2;
         margin: 0;
         text-transform: unset;
@@ -76,6 +75,7 @@ section.blog-posts {
 .article__image {
     background-position: center;
     background-size: cover;
+    display: block;
     height: 250px;
     width: 100%;
 }
