@@ -49,36 +49,6 @@
             "maxlength": ""
         },
         {
-            "key": "field_59fcb8514be6a",
-            "label": "Primary Call to Action URL",
-            "name": "primary_call_to_action_url",
-            "type": "page_link",
-            "instructions": "Text to display on primary Call to Action buttons.",
-            "required": 1,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_59fcb7cf4be69",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [
-                "page",
-                "post"
-            ],
-            "taxonomy": [],
-            "allow_null": 0,
-            "allow_archives": 0,
-            "multiple": 0
-        },
-        {
             "key": "field_5b202ca3fae44",
             "label": "Primary Call to Action Icon",
             "name": "primary_call_to_action_icon",
@@ -231,5 +201,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1546417258
+    "modified": 1546560579
 }
