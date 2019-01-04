@@ -116,6 +116,22 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_5c2ebf1d6eef7",
+            "label": "Copyright URL",
+            "name": "copyright_url",
+            "type": "url",
+            "instructions": "Website of the company or organization who holds the copyright to this website.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
         }
     ],
     "location": [
@@ -140,5 +156,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1546287466
+    "modified": 1546567494
 }

@@ -48,7 +48,16 @@
 			</div>
 
 			<div class="footer__copyright">
-				<span>© <?php the_field('copyright_year', 'option'); ?>-<?php echo date("Y"); ?> <?php the_field('copyright_holder', 'option'); ?></span>
+                <?php
+                $date_start = get_field('copyright_year', 'option');
+                $date_current = date("Y");
+                if(strcmp($date_start, $date_current) == 0) {
+                    $date_string = $date_start;
+                } else {
+                    $date_string = $date_start . '-' . $date_current;
+                }
+                ?>
+				<span>© <?php echo $date_string; ?> <a href="<?php the_field('copyright_url', 'option'); ?>" target="_blank"><?php the_field('copyright_holder', 'option'); ?></a></span>
 			</div>
 		</div>
 	</footer>
