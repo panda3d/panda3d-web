@@ -28,7 +28,8 @@ get_header();
 
                         <?php
                         $latest_id = $latest_download['ID'];
-                        $latest_version = $latest_download['post_title'];
+                        $latest_version = get_field('version_number', $latest_id);
+                        $latest_title = $latest_download['post_title'];
                         $latest_release_date = date_i18n(get_option('date_format'), strtotime($latest_download['post_date']));
                         ?>
 
@@ -36,7 +37,7 @@ get_header();
 
                         <p>
                             <a class="cta cta--primary-ver" href="<?php echo get_permalink($latest_id); ?>">
-                                <span class="cta-ver"><?php echo $latest_version; ?></span>
+                                <span class="cta-ver"><?php echo $latest_title; ?></span>
                                 <span class="cta-text">Get the Latest SDK</span>
                             </a>
                         </p>
