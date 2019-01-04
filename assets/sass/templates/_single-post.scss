@@ -5,7 +5,7 @@
         grid-gap: 2rem;
     }
 
-    .no-sidebar {
+    &.no-sidebar {
         .entry-content {
             display: block;
         }
