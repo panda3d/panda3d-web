@@ -3,6 +3,30 @@
     "title": "Theme Settings - Visuals",
     "fields": [
         {
+            "key": "field_5c2ec314c9c7d",
+            "label": "Default Post Thumbnail",
+            "name": "default_post_thumbnail",
+            "type": "image",
+            "instructions": "This thumbnail appears when no featured image has been set for posts.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_5c2c73f510420",
             "label": "Default Background Images",
             "name": "default_background_images",
@@ -65,5 +89,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1546417285
+    "modified": 1546568493
 }

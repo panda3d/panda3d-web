@@ -30,7 +30,14 @@
             <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
                 <div class="article block">
                     <a href="<?php the_permalink(); ?>">
-                        <div class="article__image" style="background-image: url('<?php the_post_thumbnail_url('large'); ?>');"></div>
+                        <?php
+                        if ( has_post_thumbnail() ) {
+                            $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'medium');
+                        } else {
+                            $thumbnail_url = get_field('default_post_thumbnail', 'option');
+                        }
+                        ?>
+                        <div class="article__image" style="background-image: url('<?php echo $thumbnail_url; ?>');"></div>
                         <div class="article__info">
                             <span class="date"><?php the_date('F j, Y'); ?></span>
                             <h3 class="title"><?php the_title(); ?></h3>
