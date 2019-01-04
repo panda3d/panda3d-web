@@ -37,6 +37,16 @@ function getOSIdentifier() {
 // ACF field which contains all OS downloads
 $download_array = get_field('downloads');
 
+// Latest download to compare with
+$latest_download = wp_get_recent_posts(array(
+	'numberposts' => 1,
+    'post_type' => 'download',
+    'post_status' => 'publish'
+))[0];
+
+$latest_id = $latest_download['ID'];
+$is_latest = ($latest_id === get_the_ID());
+
 get_header();
 ?>
 
@@ -44,14 +54,18 @@ get_header();
 		<main id="main" class="site-main">
 
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                <header class="download__header">
+                <header class="download__header <?php if(!$is_latest) { echo 'download__header--obsolete'; } ?>">
                     <div class="download__header-container">
 
                         <div class="download__recommended">
                             <h1>Download the Panda3D SDK</h1>
 
-                            <!-- TODO: Display different string for older downloads -->
-                            <p>The latest and most stable release of Panda3D. Recommended for production use.</p>
+                            <?php if($is_latest) { ?>
+                                <p>The latest and most stable release of the Panda3D SDK, released on <?php echo get_the_date(); ?>. Recommended for production use.</p>
+                            <?php } else { ?>
+                                <?php $latest_release_date = date_i18n(get_option('date_format'), strtotime($latest_download['post_date'])); ?>
+                                <p>This version of Panda3D was released on <?php echo get_the_date(); ?> and is now obsolete. The <a href="<?php echo get_permalink($latest_id); ?>">most recent version</a> of Panda3D was released on <?php echo $latest_release_date; ?>. Use at your own risk.</p>
+                            <?php } ?>
 
                             <?php
                             // Attempt to determine primary download from the user's OS
@@ -71,7 +85,7 @@ get_header();
                                 </a>
                             </p>
 
-                            <p><a href="<?php echo get_post_type_archive_link('download'); ?>">...Or choose an older version.</a></p>
+                            <p><a href="<?php echo get_post_type_archive_link('download'); ?>">...Or choose a different version.</a></p>
                         </div>
 
                         <div class="download__icon">

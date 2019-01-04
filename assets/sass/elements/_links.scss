@@ -36,13 +36,11 @@ a {
 }
 
 .cta--primary-ver {
-    background-color: darken($cta__color, 5%);
+    background-color: darken($cta__color, 5%) !important;
     color: #fff;
     padding: 0;
 
 	&:hover, &:active, &:focus {
-        background-color: darken($cta__color, 5%);
-
         .cta-text {
             background-position: 0 100%;
         }
