@@ -1,0 +1,39 @@
+.single-post {
+    .entry-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 2rem;
+    }
+
+    .no-sidebar {
+        .entry-content {
+            display: block;
+        }
+    }
+
+    .widget {
+        > ul {
+            @extend .block;
+            list-style: none;
+            padding: 0 !important;
+            border-bottom: 3px solid $color__theme-blue;
+
+            a {
+                color: unset;
+                display: block;
+                padding: 1rem;
+                text-decoration: none;
+
+                &:hover {
+                    background: #E9E9E9;
+                }
+            }
+
+            li {
+                &:not(:last-child) {
+                    border-bottom: 1px solid #E9E9E9;
+                }
+            }
+        }
+    }
+}
