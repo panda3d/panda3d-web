@@ -13,7 +13,7 @@ $os_data = [
     'ubuntu'  => ['Ubuntu',          'fab fa-ubuntu',  '/ubuntu/i'],
     'debian'  => ['Debian',          'fas fa-hdd',     '/debian/i'],
     'fedora'  => ['Fedora',          'fab fa-fedora',  '/fedora/i'],
-    'source'  => ['Source Code',     'fas fa-code',     null],
+    'source'  => ['Source Code',     'fas fa-code',    '/freebsd/i'],
     'sample'  => ['Sample Programs', 'fas fa-dice-d6',  null],
     'other'   => ['Other',           'fas fa-download', null], # Deprecated
 ];
