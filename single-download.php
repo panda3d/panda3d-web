@@ -15,7 +15,7 @@ $os_data = [
     'fedora'  => ['Fedora',          'fab fa-fedora',  '/fedora/i'],
     'source'  => ['Source Code',     'fas fa-code',    '/freebsd/i'],
     'sample'  => ['Sample Programs', 'fas fa-dice-d6',  null],
-    'other'   => ['Other',           'fas fa-download', null], # Deprecated
+    'other'   => ['Miscellaneous',   'fas fa-download', null],
 ];
 $user_agent = $_SERVER["HTTP_USER_AGENT"];
 
