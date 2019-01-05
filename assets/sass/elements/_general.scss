@@ -69,10 +69,6 @@ object {
     @include breakpoint(medium) {
         padding: 1rem 2rem;
     }
-
-    + .block {
-        margin-top: 2rem;
-    }
 }
 
 .block--info {
@@ -85,6 +81,10 @@ object {
     @include breakpoint(medium) {
         align-items: center;
         grid-gap: 2rem;
+    }
+
+    + .block {
+        margin-top: 2rem;
     }
 
     .block__icon {
