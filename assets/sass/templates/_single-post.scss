@@ -3,10 +3,10 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 2rem;
-        margin: 2rem;
 
         @include breakpoint(large) {
             grid-template-columns:2fr 1fr;
+            margin: 2rem auto;
         }
     }
 
