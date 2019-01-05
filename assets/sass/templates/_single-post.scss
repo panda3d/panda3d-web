@@ -1,8 +1,13 @@
 .single-post {
     .entry-content {
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr;
         grid-gap: 2rem;
+        margin: 2rem;
+
+        @include breakpoint(large) {
+            grid-template-columns:2fr 1fr;
+        }
     }
 
     &.no-sidebar {
@@ -12,6 +17,12 @@
     }
 
     .widget {
+        display:none;
+
+        @include breakpoint(large) {
+            display: block;
+        }
+
         > ul {
             @extend .block;
             list-style: none;
