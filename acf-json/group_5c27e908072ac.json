@@ -1,6 +1,6 @@
 {
     "key": "group_5c27e908072ac",
-    "title": "SDK Download - Attributes",
+    "title": "SDK\/Runtime Download - Attributes",
     "fields": [
         {
             "key": "field_5c2e6b89708b4",
@@ -537,6 +537,18 @@
                 "operator": "==",
                 "value": "download_category:sdk"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "download"
+            },
+            {
+                "param": "post_taxonomy",
+                "operator": "==",
+                "value": "download_category:runtime"
+            }
         ]
     ],
     "menu_order": 0,
@@ -547,5 +559,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1546554671
+    "modified": 1547585137
 }
