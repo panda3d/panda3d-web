@@ -1,12 +1,10 @@
 a {
 	color: $color__link;
 
-	&:hover, &:focus, &:active {
+	&:hover, &:active {
 		color: $color__link-hover;
-	}
-	&:focus {
-		outline: thin dotted;
-	}
+    }
+
 	&:hover, &:active {
 		outline: 0;
 	}
@@ -18,7 +16,7 @@ a {
 	padding: 1rem 1.5rem;
 	text-decoration: none;
 
-	&:hover, &:active, &:focus {
+	&:hover, &:active {
 		background-color: $cta__color-hover;
         color: #fff;
         outline: none;
@@ -40,7 +38,7 @@ a {
     color: #fff;
     padding: 0;
 
-	&:hover, &:active, &:focus {
+	&:hover, &:active {
         .cta-text {
             background-position: 0 100%;
         }
@@ -67,7 +65,7 @@ a {
 	border: $cta__border-size solid $cta__color;
 	color: $cta__color;
 
-	&:hover, &:active, &:focus {
+	&:hover, &:active {
 		border-color: $cta__color-hover;
 	}
 }
@@ -80,7 +78,7 @@ a {
 	padding: 0.3rem 0.75rem;
 	transition: all $anim__hover-duration $anim__function-easein;
 
-	&:hover, &:active, &:focus {
+	&:hover, &:active {
 		box-shadow: none;
 		border-color:  lighten($color__theme-blue, 10%);
 		color: $color__mid;
