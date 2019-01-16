@@ -2,15 +2,8 @@
 /**
  * The template for displaying download archive pages.
  *
- *
  * @package Panda3D
  */
-
-$latest_download = wp_get_recent_posts(array(
-	'numberposts' => 1,
-    'post_type' => 'download',
-    'post_status' => 'publish'
-))[0];
 
 get_header();
 ?>
@@ -18,77 +11,39 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-		<?php if ( have_posts() ) : ?>
-
-            <header class="download__header">
-                <div class="download__header-container">
-
-                    <div class="download__recommended">
-                        <h1>Download the Panda3D SDK</h1>
-
-                        <?php
-                        $latest_id = $latest_download['ID'];
-                        $latest_version = get_field('version_number', $latest_id);
-                        $latest_title = $latest_download['post_title'];
-                        $latest_release_date = date_i18n(get_option('date_format'), strtotime($latest_download['post_date']));
-                        ?>
-
-                        <p>The latest and most stable release of the Panda3D SDK is <?php echo $latest_version; ?>, which was released on <?php echo $latest_release_date; ?>. This is the recommended version for production use.</p>
-
-                        <p>
-                            <a class="cta cta--primary-ver" href="<?php echo get_permalink($latest_id); ?>">
-                                <span class="cta-ver"><?php echo $latest_title; ?></span>
-                                <span class="cta-text">Get the Latest SDK</span>
-                            </a>
-                        </p>
-                    </div>
-
-                    <div class="download__icon">
-                        <i class="fas fa-cloud-download-alt"></i>
-                    </div>
-
-                </div>
-            </header>
-
-            <div class="archive-download__content">
-                <h1>Old Versions</h1>
-                <ul class="archive-download__list block">
-                    <li>
-                        <span class="title">Version</span>
-                        <span class="date">Release Date</span>
-                    </li>
-                    <?php
-                    /* Start the Loop */
-                    while ( have_posts() ) :
-                        the_post();
-
-                        if(get_the_ID() === $latest_id) {
-                            continue;
-                        }
-
-                        $release_date = date_i18n(get_option('date_format'), strtotime(get_field('release_date')));
-                        ?>
-                        <a href="<?php echo get_permalink(); ?>">
-                            <li>
-                                <span class="title"><?php the_title(); ?></span>
-                                <span class="date"><?php the_date(); ?></span>
-                            </li>
-                        </a>
-                        <?php
-                    endwhile;
-                    ?>
-                </ul>
-            </div>
+        <?php if (have_posts()) { ?>
 
             <?php
-			the_posts_navigation();
+            $latest_id = get_the_ID();
+            $latest_version = get_field('version_number', $latest_id);
+            $latest_title = get_the_title();
+            $latest_release_date = date_i18n(get_option('date_format'), strtotime(get_the_date()));
+            $latest_category = get_the_terms(get_the_ID(), 'download_category')[0];
+            ?>
 
-		else:
+            <?php include(locate_template('template-parts/downloads/download-header.php')); ?>
 
-			get_template_part( 'template-parts/content', 'none' );
+            <div class="archive-download__content">
+                <?php include(locate_template('template-parts/downloads/download-list.php')); ?>
 
-		endif;
-		?>
+                <?php if (!is_tax('download_category', 'runtime')) { ?>
+                    <h1>Runtime</h1>
+                    <div class="block block--info block--warning">
+                        <div class="block__icon">
+                            <i class="fas fa-minus-hexagon"></i>
+                        </div>
+                        <div class="block__content">
+                            <p>The Panda3D Runtime, used to run .p3d files, is now deprecated. You can access archived versions at <a href="/downloads/runtime">this link</a>.</p>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
+
+        <?php } else { ?>
+
+			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+
+        <?php } ?>
 
 		</main>
 	</div>
