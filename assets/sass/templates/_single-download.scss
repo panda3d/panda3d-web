@@ -46,7 +46,7 @@
     text-align: center;
 
     @include breakpoint(large) {
-        grid-template-columns: 5fr 2fr;
+        grid-template-columns: 3fr 1fr;
         text-align: left;
     }
 }
