@@ -89,6 +89,7 @@ object {
 
     .block__icon {
         @include breakpoint(large) {
+            display: grid;
             padding: 0.5rem;
         }
 
@@ -113,6 +114,14 @@ object {
 
         @include breakpoint(medium) {
             @include font-size(1);
+        }
+    }
+
+    a {
+        color: white;
+
+        &:hover, &:active {
+            color: #E9E9E9;
         }
     }
 }
