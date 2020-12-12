@@ -6,7 +6,7 @@
  */
 ?>
 
-<h1>Old Versions</h1>
+<h1>All Versions</h1>
 <ul class="archive-download__list block">
     <li>
         <span class="title">Version</span>
@@ -16,10 +16,6 @@
     /* Start the Loop */
     while ( have_posts() ) :
         the_post();
-
-        if(get_the_ID() === $latest_id) {
-            continue;
-        }
 
         $release_date = date_i18n(get_option('date_format'), strtotime(get_field('release_date')));
         ?>
