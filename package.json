@@ -5,7 +5,7 @@
   "license": "GPL-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/panda3d/www.panda3d.org"
+    "url": "https://github.com/panda3d/panda3d-web"
   },
   "scripts": {
     "start": "gulp"
