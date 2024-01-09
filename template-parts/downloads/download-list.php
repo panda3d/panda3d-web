@@ -17,6 +17,10 @@
     while ( have_posts() ) :
         the_post();
 
+        /*if(get_the_ID() === $latest_id) {
+            continue;
+        }*/
+
         $release_date = date_i18n(get_option('date_format'), strtotime(get_field('release_date')));
         ?>
         <a href="<?php echo get_permalink(); ?>">
