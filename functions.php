@@ -22,6 +22,7 @@ require get_template_directory() . '/inc/core/post-excerpts.php';       // Custo
 require get_template_directory() . '/inc/core/query-modifications.php'; // Modify the main query
 require get_template_directory() . '/inc/core/template-tags.php';       // Add custom template tags
 require get_template_directory() . '/inc/core/template-functions.php';  // Functions which enhance the theme by hooking into WordPress
+require get_template_directory() . '/inc/core/nav-menu-item.php';       // Custom nav menu items
 
 /**
  * Advanced Custom Fields Functions
@@ -33,3 +34,15 @@ include get_template_directory() . '/inc/acf/acf-options.php';  // Set up ACF Op
  * Gutenberg Modifications
  */
 include get_template_directory() . '/inc/gutenberg/gutenberg-blacklist.php'; // Specify post types and page templates for Gutenberg to blacklist
+
+$request_url_pre = strtok($_SERVER['REQUEST_URI'], '?');
+if ($request_url_pre == '/download/latest' ||
+	$request_url_pre == '/download/latest/') {
+    $latest_download = wp_get_recent_posts(array(
+        'numberposts' => 1,
+        'post_type' => 'download',
+        'post_status' => 'publish'
+    ), 'OBJECT')[0];
+    header('Location: ' . get_permalink($latest_download->ID));
+    exit;
+}
