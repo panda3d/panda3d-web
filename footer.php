@@ -37,7 +37,7 @@
 				<div class="footer__social">
 					<div class="footer__textblock">
 						<i class="fal fa-comment-alt-dots fa-flip-horizontal fa-5x"></i>
-						Want to chat with other developers, or ask questions about Panda3D? Join our IRC channel: <a target="_blank" href="ircs://irc.libera.chat:6697/panda3d">#panda3d</a> on <a target="_blank" href="https://libera.chat/">Libera Chat</a>.
+						Want to chat with other developers, or ask questions about Panda3D? <a target="_blank" href="ircs://irc.libera.chat:6697/panda3d">#panda3d</a> on <a target="_blank" href="https://libera.chat/">Libera Chat</a>.
 					</div>
 					<?php if(have_rows('social_icons', 'option')): ?>
 						<?php while(have_rows('social_icons', 'option')): the_row(); ?>

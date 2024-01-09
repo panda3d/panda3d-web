@@ -27,13 +27,25 @@ get_header();
                 <?php include(locate_template('template-parts/downloads/download-list.php')); ?>
 
                 <?php if (!is_tax('download_category', 'runtime')) { ?>
+                    <h1>Development Builds</h1>
+                    <div class="block block--info">
+                        <div class="block__icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <div class="block__content">
+                            <p>If you wish to try out an in-development version of Panda3D, you can find preview builds of Panda3D at <a href="/download.php?version=devel">this link</a>. But be careful, these builds may be unstable!</p>
+                        </div>
+                    </div>
+                <?php } ?>
+
+                <?php if (!is_tax('download_category', 'runtime')) { ?>
                     <h1>Runtime</h1>
                     <div class="block block--info block--warning">
                         <div class="block__icon">
                             <i class="fas fa-minus-hexagon"></i>
                         </div>
                         <div class="block__content">
-                            <p>The Panda3D Runtime, used to run .p3d files, is now deprecated. You can access archived versions at <a href="/downloads/runtime">this link</a>.</p>
+                            <p>The Panda3D Runtime, used to run .p3d files, is now deprecated. You can access archived versions at <a href="/download/runtime">this link</a>.</p>
                         </div>
                     </div>
                 <?php } ?>

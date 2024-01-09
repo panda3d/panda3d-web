@@ -2,6 +2,7 @@
 
 require get_template_directory() . '/inc/manual/toc.php';
 require get_template_directory() . '/inc/manual/redirects.php';
+require get_template_directory() . '/inc/manual/sphinx.php';
 
 function manual_title() {
 	global $manual_toc;
@@ -46,6 +47,18 @@ function manual_redirect($page = NULL) {
 	}
 	if (isset($manual_redirects[$page])) {
 		return $manual_redirects[$page];
+	}
+	return NULL;
+}
+
+function manual_sphinx_link($page = NULL) {
+	global $manual_sphinx_mapping;
+	if (!$page) {
+		$page = manual_title();
+	}
+	if (isset($manual_sphinx_mapping[$page])) {
+		$language = manual_language();
+		return 'https://docs.panda3d.org/1.10/' . $language . '/' . $manual_sphinx_mapping[$page];
 	}
 	return NULL;
 }

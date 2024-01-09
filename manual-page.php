@@ -11,6 +11,12 @@ session_start();
 
 require get_template_directory() . '/inc/manual/functions.php';
 
+$sphinx_link = manual_sphinx_link();
+if ($sphinx_link) {
+	wp_redirect($sphinx_link, 301);
+	exit;
+}
+
 $redirect = manual_redirect();
 if ($redirect) {
 	wp_redirect(manual_permalink($redirect), 301);
