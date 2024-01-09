@@ -14,11 +14,17 @@ get_header();
         <?php if (have_posts()) { ?>
 
             <?php
-            $latest_id = get_the_ID();
+            $latest_download = wp_get_recent_posts(array(
+                'numberposts' => 1,
+                'post_type' => 'download',
+                'post_status' => 'publish'
+            ))[0];
+
+            $latest_id = $latest_download['ID'];
             $latest_version = get_field('version_number', $latest_id);
-            $latest_title = get_the_title();
-            $latest_release_date = date_i18n(get_option('date_format'), strtotime(get_the_date()));
-            $latest_category = get_the_terms(get_the_ID(), 'download_category')[0];
+            $latest_title = $latest_download['post_title'];
+            $latest_release_date = date_i18n(get_option('date_format'), strtotime($latest_download['post_date']));
+            $latest_category = get_the_terms($latest_id, 'download_category')[0];
             ?>
 
             <?php include(locate_template('template-parts/downloads/download-header.php')); ?>
