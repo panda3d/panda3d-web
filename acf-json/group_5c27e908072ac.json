@@ -68,13 +68,40 @@
             "maxlength": ""
         },
         {
+            "key": "field_659dcbf6a037b",
+            "label": "Auto Populate Release Notes",
+            "name": "auto_release_notes",
+            "type": "true_false",
+            "instructions": "Automatically generates the release notes based on the notes-{version}.txt file in the download directory.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_5c2a7e25bbfc9",
             "label": "Release Notes",
             "name": "release_notes",
             "type": "wysiwyg",
             "instructions": "",
             "required": 1,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_659dcbf6a037b",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -87,13 +114,40 @@
             "delay": 0
         },
         {
+            "key": "field_659d5ecfed2a9",
+            "label": "Auto Populate Downloads",
+            "name": "auto_downloads",
+            "type": "true_false",
+            "instructions": "Automatically populates the download lists on save based on the version number and files found in the download directory.\r\nYou can edit the file patterns in the download category settings.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_5c27e9f6cf1fc",
             "label": "Downloads",
             "name": "downloads",
             "type": "group",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_659d5ecfed2a9",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -578,13 +632,12 @@
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": -100,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
-    "description": "",
-    "modified": 1547585137
+    "active": true,
+    "description": ""
 }

@@ -23,6 +23,7 @@ require get_template_directory() . '/inc/core/query-modifications.php'; // Modif
 require get_template_directory() . '/inc/core/template-tags.php';       // Add custom template tags
 require get_template_directory() . '/inc/core/template-functions.php';  // Functions which enhance the theme by hooking into WordPress
 require get_template_directory() . '/inc/core/nav-menu-item.php';       // Custom nav menu items
+require get_template_directory() . '/inc/core/auto-downloads.php';      // Auto download population
 
 /**
  * Advanced Custom Fields Functions
