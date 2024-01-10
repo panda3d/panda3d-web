@@ -85,9 +85,13 @@ function panda3d_auto_populate_downloads($post_id, $post) {
                 if ($auto_download['file']) {
                     $file = str_replace('{version}', $version, $auto_download['file']);
                     if (!file_exists($file_prefix . $file)) {
-                        continue;
+                        $files = glob($file_prefix . $file);
+                        if (count($files) == 0) {
+                            continue;
+                        }
+                        $file = basename($files[0]);
                     }
-                    if (!isset($url) || empty($url)) {
+                    if (empty($url)) {
                         $url = $url_prefix . $file;
                     }
                 }
