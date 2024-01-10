@@ -74,7 +74,7 @@ get_header();
                             </div>
                             <div class="block__content">
                                 <p>Already a Python user? You can install this version of Panda3D with pip!</p>
-                                <pre>pip install panda3d==<?php the_field('version_number'); ?></pre>
+                                <pre>pip install <?php echo get_field('pip_package') ?: 'panda3d'; ?>==<?php the_field('version_number'); ?></pre>
                             </div>
                         </div>
                     <?php } ?>

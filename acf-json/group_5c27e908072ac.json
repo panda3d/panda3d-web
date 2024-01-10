@@ -41,6 +41,33 @@
             "ui_off_text": ""
         },
         {
+            "key": "field_659dc779004ca",
+            "label": "pip Package Name",
+            "name": "pip_package",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c2e6a5e3878e",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "panda3d",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5c2a7e25bbfc9",
             "label": "Release Notes",
             "name": "release_notes",
