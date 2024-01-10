@@ -73,7 +73,7 @@
             "name": "auto_release_notes",
             "type": "true_false",
             "instructions": "Automatically generates the release notes based on the notes-{version}.txt file in the download directory.",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
